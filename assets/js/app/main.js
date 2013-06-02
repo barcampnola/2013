@@ -23,7 +23,6 @@ $(function() {
     $(".animated").spritespin("animate", false);
 
     PageTransitions.navigate(toPage, "moveToLeft", function() {
-      console.log($(".page-" + toPage));
       $(".page-" + toPage + " .animated").spritespin("animate", true);
     });
   });
