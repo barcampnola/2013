@@ -18,7 +18,7 @@ $(function() {
   $("[data-click~='next-page']").click(function(e) {
     e.preventDefault();
 
-    PageTransitions.navigate("next", "moveToLeft");
+    PageTransitions.navigate("schedule", "moveToLeft");
   });
 
   $("[data-click~='previous-page']").click(function(e) {
