@@ -6,11 +6,11 @@ $.fn.preload = function() {
 
 // Usage:
 
-$([
-  '/img/page-2.jpg',
-  '/img/page-3.jpg',
-  '/img/page-2-bear-sprite.png'
-]).preload();
+// $([
+//   '/img/page-2.jpg',
+//   '/img/page-3.jpg',
+//   '/img/page-2-bear-sprite.png'
+// ]).preload();
 
 
 
@@ -18,13 +18,13 @@ $(function() {
   $("[data-click~='next-page']").click(function(e) {
     e.preventDefault();
 
-    PageTransitions.nextPage(1);
+    PageTransitions.navigate("next", "moveToLeft");
   });
 
   $("[data-click~='previous-page']").click(function(e) {
     e.preventDefault();
 
-    PageTransitions.nextPage(2);
+    PageTransitions.navigate("previous", "moveToRight");
   });
 });
 
