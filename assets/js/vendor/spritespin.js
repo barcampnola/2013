@@ -154,7 +154,7 @@
     data.target.css({
       width    : w,
       height   : h,
-      position : "relative"
+      position : "absolute"
     });
 
     var css = {

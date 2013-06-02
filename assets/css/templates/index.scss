@@ -46,6 +46,10 @@ body {
   z-index: 1;
 }
 
+.animated {
+  margin: 0 auto;
+}
+
 
 .page-main {
   @extend %page;
@@ -71,18 +75,25 @@ body {
   background-image: url(/img/page-4.jpg);
 }
 
-.page-1-bear {
+@mixin bear($width) {
   position: absolute;
+  bottom: 0;
   left: 50%;
-  bottom: 0px;
+  margin-left: -($width / 2);
 }
 
-.page-2-bear {
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
+.page-main-bear {
+  @include bear(475px);
 }
 
-.page-1-bear-container {
-  text-align: center;
+.page-about-bear {
+  @include bear(406px);
+}
+
+.page-schedule-bear {
+  @include bear(343px);
+}
+
+.page-register-bear {
+  @include bear(448px);
 }

@@ -31,7 +31,7 @@ $(function() {
 
 
 
-$(".page-1-bear").spritespin({
+$(".page-main-bear").spritespin({
   source      : "/img/page-1-bear-sprite.png",
   width       : 475,
   height      : 600,
@@ -42,7 +42,7 @@ $(".page-1-bear").spritespin({
   behavior    : "none"
 });
 
-$(".page-2-bear").spritespin({
+$(".page-about-bear").spritespin({
   source      : "/img/page-2-bear-sprite.png",
   animate     : false,
   width       : 406,
@@ -54,7 +54,7 @@ $(".page-2-bear").spritespin({
   behavior    : "none"
 });
 
-$(".page-3-bear").spritespin({
+$(".page-schedule-bear").spritespin({
   source      : "/img/page-3-bear-sprite.png",
   animate     : false,
   width       : 343,
@@ -66,7 +66,7 @@ $(".page-3-bear").spritespin({
   behavior    : "none"
 });
 
-$(".page-4-bear").spritespin({
+$(".page-register-bear").spritespin({
   source      : "/img/page-4-bear-sprite.png",
   animate     : false,
   width       : 448,
