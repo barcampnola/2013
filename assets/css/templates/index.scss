@@ -29,15 +29,14 @@ body {
   position: relative;
   height:100%;
   // overflow-y: none;
-  // overflow-x: none;
+  overflow-x: none;
 }
 
 .pages {
   position: relative;
+  overflow: hidden;
   height: 100%;
   width: 100%;
-  overflow-x: none;
-  -webkit-transform: translateZ(0);
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   perspective: 1200px;
@@ -48,25 +47,25 @@ body {
 }
 
 
-.page-1 {
+.page-main {
   @extend %page;
 
   background-image: url(/img/page-1.jpg);
 }
 
-.page-2 {
+.page-about {
   @extend %page;
 
   background-image: url(/img/page-2.jpg);
 }
 
-.page-3 {
+.page-schedule {
   @extend %page;
 
   background-image: url(/img/page-3.jpg);
 }
 
-.page-4 {
+.page-register {
   @extend %page;
 
   background-image: url(/img/page-4.jpg);

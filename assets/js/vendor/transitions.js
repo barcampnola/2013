@@ -37,7 +37,7 @@ var PageTransitions = (function() {
     pages.eq(current).addClass('page-current');
   }
 
-  function navigate(direction, animationType) {
+  function navigate(direction, animationType, callback) {
     if (isAnimating) return false
 
     isAnimating = true;
@@ -80,6 +80,10 @@ var PageTransitions = (function() {
     isAnimating = false;
 
     if (!support) onEndAnimation(outPage, inPage)
+
+    if (callback) {
+      callback();
+    }
   }
 
   function setPage(page) {

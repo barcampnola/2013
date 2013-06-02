@@ -15,16 +15,17 @@ $.fn.preload = function() {
 
 
 $(function() {
-  $("[data-click~='next-page']").click(function(e) {
+  $("[data-page-change]").click(function(e) {
     e.preventDefault();
 
-    PageTransitions.navigate("schedule", "moveToLeft");
-  });
+    toPage = $(this).attr("data-page-change");
 
-  $("[data-click~='previous-page']").click(function(e) {
-    e.preventDefault();
+    $(".animated").spritespin("animate", false);
 
-    PageTransitions.navigate("previous", "moveToRight");
+    PageTransitions.navigate(toPage, "moveToLeft", function() {
+      console.log($(".page-" + toPage));
+      $(".page-" + toPage + " .animated").spritespin("animate", true);
+    });
   });
 });
 
@@ -43,6 +44,7 @@ $(".page-1-bear").spritespin({
 
 $(".page-2-bear").spritespin({
   source      : "/img/page-2-bear-sprite.png",
+  animate     : false,
   width       : 406,
   height      : 500,
   frames      : 30,
@@ -54,6 +56,7 @@ $(".page-2-bear").spritespin({
 
 $(".page-3-bear").spritespin({
   source      : "/img/page-3-bear-sprite.png",
+  animate     : false,
   width       : 343,
   height      : 500,
   frames      : 48,
@@ -65,6 +68,7 @@ $(".page-3-bear").spritespin({
 
 $(".page-4-bear").spritespin({
   source      : "/img/page-4-bear-sprite.png",
+  animate     : false,
   width       : 448,
   height      : 550,
   frames      : 54,
