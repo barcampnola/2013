@@ -22,7 +22,7 @@ $(function() {
 
     $(".animated").spritespin("animate", false);
 
-    PageTransitions.navigate(toPage, "moveToLeft", function() {
+    Shifter.navigate(toPage, "moveToLeft", function() {
       $(".page-" + toPage + " .animated").spritespin("animate", true);
     });
   });
@@ -76,3 +76,7 @@ $(".page-register-bear").spritespin({
   module      : "360",
   behavior    : "none"
 });
+
+
+shifter = $("[data-page]").shifter();
+console.log(shifter);

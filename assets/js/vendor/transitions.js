@@ -1,122 +1,133 @@
-var PageTransitions = (function() {
+(function(window, $) {
+  var Shifter = function(element, options) {
+    this.pages = $(element);
+    this.pagesCount = this.pages.length
+    this.current = 0
+    this.isAnimating = false
+    this.endOutPage = false
+    this.endNextPage = false
+    this.animEndEventNames = {
+      'WebkitAnimation' : 'webkitAnimationEnd',
+      'OAnimation' : 'oAnimationEnd',
+      'msAnimation' : 'MSAnimationEnd',
+      'animation' : 'animationend'
+    }
 
-  var pages = $("[data-page]"),
-      pagesCount = pages.length,
-      current = 0,
-      isAnimating = false,
-      endOutPage = false,
-      endNextPage = false,
-      animEndEventNames = {
-        'WebkitAnimation' : 'webkitAnimationEnd',
-        'OAnimation' : 'oAnimationEnd',
-        'msAnimation' : 'MSAnimationEnd',
-        'animation' : 'animationend'
+    this.animation = {
+      moveToLeft: {
+        outClass: "page-moveToLeft",
+        inClass:  "page-moveFromRight"
       },
 
-      animEndEventName = animEndEventNames[ Modernizr.prefixed('animation') ],
-      support = Modernizr.cssanimations,
+      moveToRight: {
+        outClass: "page-moveToRight",
+        inClass:  "page-moveFromLeft"
+      }
+    }
 
-      animation = {
-        moveToLeft: {
-          outClass: "page-moveToLeft",
-          inClass:  "page-moveFromRight"
-        },
+    this.animEndEventName = this.animEndEventNames[ Modernizr.prefixed('animation') ]
+    this.support = Modernizr.cssanimations
+  };
 
-        moveToRight: {
-          outClass: "page-moveToRight",
-          inClass:  "page-moveFromLeft"
-        }
+  Shifter.prototype = {
+
+    init: function() {
+      this.pages.each( function() {
+        var page = $(this);
+        page.data('originalClasses', page.attr('class'));
+      });
+
+      this.pages.eq(this.current).addClass('page-current');
+
+      return this;
+    },
+
+    navigate: function(direction, animationType, callback) {
+      var _this = this;
+
+      if (this.isAnimating) return false
+
+      this.isAnimating = true;
+
+      var outPage = this.pages.eq(this.current);
+
+      if (direction === "next") {
+        this.setNextPage();
+      }
+      else if (direction === "previous") {
+        this.setPreviousPage();
+      }
+      else {
+        this.setPage(direction);
       }
 
-  function init() {
-    pages.each( function() {
-      var page = $(this);
-      page.data('originalClasses', page.attr('class'));
-    });
 
-    pages.eq(current).addClass('page-current');
-  }
+      var inPage   = this.pages.eq(this.current),
+          outClass = this.animation[animationType].outClass,
+          inClass  = this.animation[animationType].inClass;
 
-  function navigate(direction, animationType, callback) {
-    if (isAnimating) return false
+      if (!inPage.hasClass("page-current")) {
+        inPage.addClass('page-current');
 
-    isAnimating = true;
+        outPage.addClass(outClass).on(this.animEndEventName, function() {
+          outPage.off(_this.animEndEventName);
+          _this.endOutPage = true;
 
-    var outPage = pages.eq(current);
+          if (_this.endNextPage) _this.onEndAnimation(outPage, inPage);
+        });
 
-    if (direction === "next") {
-      setNextPage();
-    }
-    else if (direction === "previous") {
-      setPreviousPage();
-    }
-    else {
-      setPage(direction);
-    }
+        inPage.addClass(inClass).on(this.animEndEventName, function() {
+          inPage.off(_this.animEndEventName);
+          _this.endNextPage = true;
 
+          if (_this.endOutPage) _this.onEndAnimation(outPage, inPage);
+        });
+      }
 
-    var inPage   = pages.eq(current),
-        outClass = animation[animationType].outClass,
-        inClass  = animation[animationType].inClass;
+      this.isAnimating = false;
 
-    if (!inPage.hasClass("page-current")) {
-      inPage.addClass('page-current');
+      if (!this.support) this.onEndAnimation(outPage, inPage);
 
-      outPage.addClass(outClass).on(animEndEventName, function() {
-        outPage.off(animEndEventName );
-        endOutPage = true;
+      if (callback) {
+        callback();
+      }
+    },
 
-        if (endNextPage) onEndAnimation(outPage, inPage);
-      });
+    setPage: function(page) {
+      if (typeof page === "number") {
+        this.current = pageNumber;
+      }
+      else {
+        this.current = this.pages.index($("[data-page=" + page + "]"))
+      }
+    },
 
-      inPage.addClass(inClass).on(animEndEventName, function() {
-        inPage.off(animEndEventName );
-        endNextPage = true;
+    setPreviousPage: function() {
+      if (this.current > 0) --this.current
 
-        if (endOutPage) onEndAnimation(outPage, inPage);
-      });
-    }
+      else this.current = this.pagesCount - 1
+    },
 
-    isAnimating = false;
+    setNextPage: function() {
+      if (this.current < this.pagesCount - 1) ++this.current
 
-    if (!support) onEndAnimation(outPage, inPage)
+      else this.current = 0
+    },
 
-    if (callback) {
-      callback();
-    }
-  }
+    onEndAnimation: function(outPage, inPage) {
+      this.endOutPage = false;
+      this.endNextPage = false;
 
-  function setPage(page) {
-    if (typeof page === "number") {
-      current = pageNumber;
-    }
-    else {
-      current = pages.index($("[data-page=" + page + "]"))
+      outPage.attr('class', outPage.data('originalClasses'));
+      inPage.attr('class', inPage.data('originalClasses') + ' page-current');
     }
   }
 
-  function setPreviousPage() {
-    if (current > 0) --current
+  $.fn.shifter = function(options) {
+    shifter = new Shifter(this, options).init();
+    window.Shifter = shifter
+    return shifter;
+  };
 
-    else current = pagesCount - 1
-  }
-
-  function setNextPage() {
-    if (current < pagesCount - 1) ++current
-
-    else current = 0
-  }
-
-  function onEndAnimation(outPage, inPage) {
-    endOutPage = false;
-    endNextPage = false;
-
-    outPage.attr('class', outPage.data('originalClasses'));
-    inPage.attr('class', inPage.data('originalClasses') + ' page-current');
-  }
-
-  init();
-
-  return { init : init, navigate : navigate };
-
-})();
+  window.Shifter = Shifter;
+})(window, jQuery);
