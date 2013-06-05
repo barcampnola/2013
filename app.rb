@@ -14,6 +14,7 @@ assets {
   serve '/js',  from: 'assets/js'
   serve '/css', from: 'assets/css'
   serve '/img', from: 'assets/img'
+  serve '/fonts', from: 'assets/fonts'
 
   js :app, '/js/app.js', [
     '/js/vendor/*.js',
