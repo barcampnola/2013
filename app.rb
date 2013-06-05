@@ -3,10 +3,12 @@ require 'sass/plugin/rack'
 require 'sinatra/assetpack'
 
 set :root, File.dirname(__FILE__)
+set :sass, { :load_paths => [ "./assets/css" ] }
+
 register Sinatra::AssetPack
 
 assets {
-  css_compression :sass
+  # css_compression :sass
   js_compression :jsmin
 
   serve '/js',  from: 'assets/js'
@@ -18,8 +20,8 @@ assets {
     '/js/app/*.js'
   ]
 
-  css :app, '/css/app.css', [
-    '/css/**/*.css',
+  css :app, [
+    '/css/app.css'
   ]
 }
 

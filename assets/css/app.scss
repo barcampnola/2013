@@ -1,3 +1,5 @@
-@import "lib/**/*";
-@import "frame/base";
-@import "templates/**/*";
+@import "assets/css/components/general";
+@import "assets/css/lib/mixins";
+@import "assets/css/lib/animations";
+@import "assets/css/frame/base";
+@import "assets/css/templates/index";
