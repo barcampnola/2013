@@ -1,3 +1,6 @@
+$orangish: #ffe686;
+$neongreen: #86ffa4;
+
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
 
 @font-face {
@@ -141,9 +144,33 @@ nav {
 }
 
 .schedule-name {
-  text-transform: uppercase;
+  text-transform: normal;
 }
 
 .schedule-time {
 
+}
+
+h2 {
+  text-align: center;
+  font-size: 1em;
+}
+
+.page-title {
+  color: white;
+  font-size: 4em;
+  letter-spacing: .15em;
+  font-weight: 800;
+  text-transform: uppercase;
+  @include text-shadow(-3px 3px 0px rgba(255,255,255,0.5));
+}
+
+.page-subtitle {
+  display: block;
+  font-family: "Satisfy", "Proxima Nova", Arial, sans-serif;
+  font-weight: 300;
+  color: rgba(0,0,0,0.25);//$orangish;
+  font-size: 3em;
+  margin-top: -.75em;
+  @include transform(rotate(-3deg));
 }
