@@ -108,3 +108,10 @@
   -webkit-animation-duration: $duration;
   -webkit-animation-iteration-count: $iteration;
 }
+
+@mixin bear($width) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -($width / 2);
+}

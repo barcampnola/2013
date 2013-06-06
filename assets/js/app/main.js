@@ -31,7 +31,7 @@ $(function() {
 
 
 $(".page-main-bear").spritespin({
-  source      : "/img/page-1-bear-sprite.png",
+  source      : "/img/page-main-bear-sprite.png",
   width       : 475,
   height      : 600,
   frames      : 29,
@@ -42,7 +42,7 @@ $(".page-main-bear").spritespin({
 });
 
 $(".page-about-bear").spritespin({
-  source      : "/img/page-2-bear-sprite.png",
+  source      : "/img/page-about-bear-sprite.png",
   animate     : false,
   width       : 406,
   height      : 500,
@@ -54,7 +54,7 @@ $(".page-about-bear").spritespin({
 });
 
 $(".page-schedule-bear").spritespin({
-  source      : "/img/page-3-bear-sprite.png",
+  source      : "/img/page-schedule-bear-sprite.png",
   animate     : false,
   width       : 343,
   height      : 500,
@@ -66,7 +66,7 @@ $(".page-schedule-bear").spritespin({
 });
 
 $(".page-register-bear").spritespin({
-  source      : "/img/page-4-bear-sprite.png",
+  source      : "/img/page-register-bear-sprite.png",
   animate     : false,
   width       : 448,
   height      : 550,
@@ -77,6 +77,16 @@ $(".page-register-bear").spritespin({
   behavior    : "none"
 });
 
+$(".page-sponsors-bear").spritespin({
+  source      : "/img/page-sponsors-bear-sprite.png",
+  animate     : false,
+  width       : 507,
+  height      : 450,
+  frames      : 24,
+  framesX     : 6,
+  loop        : true,
+  module      : "360",
+  behavior    : "none"
+});
 
 shifter = $("[data-page]").shifter();
-console.log(shifter);

@@ -1,0 +1,86 @@
+%schedule-icon {
+  @extend %icon;
+
+  width: 18px;
+  height: 18px;
+  padding: 0 10px;
+}
+
+%schedule-day {
+  width: 44%;
+}
+
+.schedule {
+  @extend %clearfix;
+
+  padding: 30px;
+}
+
+.schedule-day-one {
+  @extend %schedule-day;
+
+  float: left;
+}
+
+.schedule-day-two {
+  @extend %schedule-day;
+
+  float: right;
+}
+
+.schedule-list {
+  @include border-radius(5px);
+
+  background: #fff;
+  border: 9px solid hsla(70, 88%, 31%, 0.8);
+  opacity: 0.94;
+}
+
+.schedule-item {
+  border-top: 1px solid black;
+
+  padding: 10px 0;
+
+  &:first-child {
+    border-top: 0px;
+  }
+}
+
+.schedule-name {
+  text-transform: uppercase;
+}
+
+.schedule-time {
+  float: right;
+  padding-right: 10px;
+}
+
+.schedule-greet {
+  @extend %schedule-icon;
+
+  background-image: url(/img/icon-greet.png);
+}
+
+.schedule-coffee {
+  @extend %schedule-icon;
+
+  background-image: url(/img/icon-coffee.png);
+}
+
+.schedule-food {
+  @extend %schedule-icon;
+
+  background-image: url(/img/icon-food.png);
+}
+
+.schedule-talk {
+  @extend %schedule-icon;
+
+  background-image: url(/img/icon-talk.png);
+}
+
+.schedule-hack {
+  @extend %schedule-icon;
+
+  background-image: url(/img/icon-hack.png);
+}

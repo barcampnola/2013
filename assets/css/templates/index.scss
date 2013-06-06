@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
 
 @font-face {
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova Bold';
     src: url('/fonts/proximanova-black-webfont.eot');
     src: url('/fonts/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/proximanova-black-webfont.woff') format('woff'),
@@ -66,33 +66,33 @@ nav {
 .page-main {
   @extend %page;
 
-  background-image: url(/img/page-1.jpg);
+  background-image: url(/img/page-main.jpg);
 }
 
 .page-about {
   @extend %page;
 
-  background-image: url(/img/page-2.jpg);
+  background-image: url(/img/page-about.jpg);
 }
 
 .page-schedule {
   @extend %page;
 
-  background-image: url(/img/page-3.jpg);
+  background-image: url(/img/page-schedule.jpg);
 }
 
 .page-register {
   @extend %page;
 
-  background-image: url(/img/page-4.jpg);
+  background-image: url(/img/page-register.jpg);
 }
 
-@mixin bear($width) {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -($width / 2);
+.page-sponsors {
+  @extend %page;
+
+  background-image: url(/img/page-sponsors.jpg);
 }
+
 
 .page-main-bear {
   @include bear(475px);
@@ -110,40 +110,8 @@ nav {
   @include bear(448px);
 }
 
-
-.schedule {
-  @extend %clearfix;
+.page-sponsors-bear {
+  position: absolute;
+  bottom: 0;
 }
 
-.schedule-day-one {
-  float: left;
-}
-
-.schedule-day-two {
-  float: right;
-}
-
-.schedule-list {
-  @include border-radius(5px);
-
-  background: #fff;
-  border: 5px solid green;
-
-  display: inline-block;
-}
-
-.schedule-item {
-  border-top: 1px solid black;
-
-  &:first-child {
-    border-top: 0px;
-  }
-}
-
-.schedule-name {
-  text-transform: uppercase;
-}
-
-.schedule-time {
-
-}
