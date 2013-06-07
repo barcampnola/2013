@@ -48,3 +48,14 @@
   vertical-align: text-bottom;
   -webkit-font-smoothing: antialiased;
 }
+
+
+%logo-image {
+  display: inline-block;
+  width: 180px;
+  padding: 15px;
+
+  img {
+    width: 150px;
+  }
+}

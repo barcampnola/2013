@@ -1,0 +1,70 @@
+.sponsors-container {
+  background-color: purple;
+
+  width: 660px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sponsors {
+  position: relative;
+  overflow: auto;
+}
+
+.sponsors-item {
+  list-style: none;
+  float: left;
+}
+
+.sponsors-logo-item {
+  display: inline-block;
+}
+
+.apptitude-logo {
+  @extend %logo-image;
+}
+
+.carrollton-group-logo {
+  @extend %logo-image;
+}
+
+.cotingasoft-logo {
+  @extend %logo-image;
+}
+
+.ddd-logo {
+  @extend %logo-image;
+}
+
+.federated-sample-logo {
+  @extend %logo-image;
+}
+
+.flatstack-logo {
+  @extend %logo-image;
+}
+
+.gnoinc-logo {
+  @extend %logo-image;
+}
+
+.hop-and-jaunt-logo {
+  @extend %logo-image;
+}
+
+.kickboard-logo {
+  @extend %logo-image;
+}
+
+.lanyap-logo {
+  @extend %logo-image;
+}
+
+.launchpad-logo {
+  @extend %logo-image;
+}
+
+.red-ticket-games-logo {
+  @extend %logo-image;
+}

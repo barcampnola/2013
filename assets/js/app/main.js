@@ -90,3 +90,10 @@ $(".page-sponsors-bear").spritespin({
 });
 
 shifter = $("[data-page]").shifter();
+
+
+$(function() {
+  $('.sponsors').unslider({
+    delay: false
+  });
+});
