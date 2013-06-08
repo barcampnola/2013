@@ -1,5 +1,15 @@
-$orangish: #ffe686;
-$neongreen: #86ffa4;
+@function tetrad($color) {
+  @return saturate(lighten(adjust_hue($color, 48), 16), 2)
+}
+
+$red: #fc4243;
+$blue: #4e97b8;
+$green: #e4eb67;
+$subtitle-color-sponsors: tetrad($blue);
+$subtitle-color-schedule: #c360f8;
+$subtitle-color-main: #fc4243;
+$subtitle-color-register: tetrad($blue);
+$subtitle-color-about: #ffe686;
 
 @font-face {
     font-family: 'Proxima Nova Bold';
@@ -75,47 +85,53 @@ h2 {
   letter-spacing: .15em;
   font-weight: 800;
   text-transform: uppercase;
-  @include text-shadow(-3px 3px 0px rgba(255,255,255,0.5));
+  @include text-shadow(-3px 3px 0px rgba(0,0,0,0.25));
 }
 
 .page-subtitle {
   display: block;
   font-family: "Satisfy", "Proxima Nova", Arial, sans-serif;
   font-weight: 300;
-  color: $orangish;
+  color: #aaa;
   font-size: 3em;
   margin-top: -.8em;
   @include transform(rotate(-3deg));
+  @include text-shadow(0 1px 1px rgba(0,0,0,0.5));
 }
 
 .page-main {
   @extend %page;
 
   background-image: url(/img/page-main.jpg);
+  .page-subtitle { color: $subtitle-color-main; }
 }
 
 .page-about {
   @extend %page;
 
   background-image: url(/img/page-about.jpg);
+  .page-subtitle { color: $subtitle-color-about; }
 }
 
 .page-schedule {
   @extend %page;
 
   background-image: url(/img/page-schedule.jpg);
+  .page-subtitle { color: $subtitle-color-schedule; }
 }
 
 .page-register {
   @extend %page;
 
   background-image: url(/img/page-register.jpg);
+  .page-subtitle { color: $subtitle-color-register; }
 }
 
 .page-sponsors {
   @extend %page;
 
   background-image: url(/img/page-sponsors.jpg);
+  .page-subtitle { color: $subtitle-color-sponsors; }
 }
 
 
