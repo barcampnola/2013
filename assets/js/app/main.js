@@ -12,9 +12,19 @@ $.fn.preload = function() {
 //   '/img/page-2-bear-sprite.png'
 // ]).preload();
 
+$(window).load(function() {
+  $(".page-current .animated").spritespin("animate", true);
+
+  setTimeout(function() {
+    $(".page-loader").fadeOut(1000, function() {
+      $(this).remove();
+    });
+  }, 2000);
+})
 
 
 $(function() {
+  $(".loading-message").pawser();
 
   $(".main-bear").spritespin({
     source      : "/img/page-main-bear-sprite.png",
@@ -22,6 +32,7 @@ $(function() {
     height      : 550,
     frames      : 21,
     framesX     : 3,
+    animate     : false,
     loop        : true,
     module      : "360",
     behavior    : "none"
@@ -34,6 +45,7 @@ $(function() {
     height      : 500,
     frames      : 30,
     framesX     : 6,
+    animate     : false,
     loop        : true,
     module      : "360",
     behavior    : "none"
@@ -46,6 +58,7 @@ $(function() {
     height      : 500,
     frames      : 48,
     framesX     : 8,
+    animate     : false,
     loop        : true,
     module      : "360",
     behavior    : "none"
@@ -58,6 +71,7 @@ $(function() {
     height      : 550,
     frames      : 54,
     framesX     : 6,
+    animate     : false,
     loop        : true,
     module      : "360",
     behavior    : "none"
@@ -71,6 +85,7 @@ $(function() {
     frames      : 24,
     framesX     : 6,
     loop        : true,
+    animate     : false,
     module      : "360",
     behavior    : "none"
   });
@@ -86,7 +101,7 @@ $(function() {
 
     toPage = $(this).attr("data-page-change");
 
-    $(".animated").spritespin("animate", false);
+    $(".page-current .animated").spritespin("animate", false);
 
     Shifter.navigate(toPage, "moveToLeft", function() {
       $(".page-" + toPage + " .animated").spritespin("animate", true);
