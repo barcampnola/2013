@@ -1,12 +1,4 @@
 @import "assets/css/components/general";
-
-@import "assets/css/lib/config";
-@import "assets/css/lib/mixins";
-@import "assets/css/lib/type";
-@import "assets/css/lib/animations";
-
+@import "assets/css/lib/base";
 @import "assets/css/frame/base";
-
-@import "assets/css/templates/index";
-@import "assets/css/templates/schedule";
-@import "assets/css/templates/sponsors";
+@import "assets/css/templates/base";

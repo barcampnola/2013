@@ -16,18 +16,18 @@ $.fn.preload = function() {
 
 $(function() {
 
-  $(".page-main-bear").spritespin({
+  $(".main-bear").spritespin({
     source      : "/img/page-main-bear-sprite.png",
-    width       : 475,
-    height      : 600,
-    frames      : 29,
-    framesX     : 6,
+    width       : 424,
+    height      : 550,
+    frames      : 21,
+    framesX     : 3,
     loop        : true,
     module      : "360",
     behavior    : "none"
   });
 
-  $(".page-about-bear").spritespin({
+  $(".about-bear").spritespin({
     source      : "/img/page-about-bear-sprite.png",
     animate     : false,
     width       : 406,
@@ -39,7 +39,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".page-schedule-bear").spritespin({
+  $(".schedule-bear").spritespin({
     source      : "/img/page-schedule-bear-sprite.png",
     animate     : false,
     width       : 343,
@@ -51,7 +51,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".page-register-bear").spritespin({
+  $(".register-bear").spritespin({
     source      : "/img/page-register-bear-sprite.png",
     animate     : false,
     width       : 448,
@@ -63,7 +63,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".page-sponsors-bear").spritespin({
+  $(".sponsors-bear").spritespin({
     source      : "/img/page-sponsors-bear-sprite.png",
     animate     : false,
     width       : 507,
