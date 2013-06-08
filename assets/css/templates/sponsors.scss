@@ -1,0 +1,100 @@
+.sponsors-container {
+  @include border-radius(20px);
+
+  background-color: hsla(300, 81%, 10%, 0.65);
+  border: 8px solid hsla(300, 81%, 10%, 0.65);
+
+  width: 660px;
+  position: absolute;
+  bottom: 20%;
+  right: 30px;
+}
+
+.sponsors {
+  position: relative;
+  overflow: auto;
+}
+
+.sponsors-item {
+  list-style: none;
+  float: left;
+}
+
+.sponsors-logo-item {
+  text-align: center;
+
+  display: inline-block;
+  padding: 15px;
+}
+
+.apptitude-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/apptitude.png);
+}
+
+.carrollton-group-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/carrollton-group.png);
+}
+
+.cotingasoft-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/cotingasoft.png);
+}
+
+.ddd-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/ddd.png);
+}
+
+.federated-sample-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/federated-sample.png);
+}
+
+.flatstack-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/flatstack.png);
+}
+
+.gnoinc-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/gnoinc.png);
+}
+
+.hop-and-jaunt-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/hop-and-jaunt.png);
+}
+
+.kickboard-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/kickboard.png);
+}
+
+.lanyap-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/lanyap.png);
+}
+
+.launchpad-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/launchpad.png);
+}
+
+.red-ticket-games-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/red-ticket-games.png);
+}
