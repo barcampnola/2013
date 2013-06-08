@@ -14,7 +14,7 @@ end
 
 assets {
   # css_compression :sass
-  js_compression :jsmin
+  js_compression :simple
 
   serve '/js',  from: 'assets/js'
   serve '/css', from: 'assets/css'

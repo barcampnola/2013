@@ -1,0 +1,70 @@
+
+.pages {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.page-current {
+  z-index: 1;
+}
+
+.page-title {
+  margin-top: 2em;
+  color: white;
+  font-size: 4em;
+  letter-spacing: .15em;
+  font-weight: 800;
+  text-transform: uppercase;
+  z-index: 2;
+  position: relative;
+  @include text-shadow(-3px 3px 0px rgba(0,0,0,0.25));
+}
+
+.page-subtitle {
+  display: block;
+  font-family: "Satisfy", "Proxima Nova", Arial, sans-serif;
+  font-weight: 300;
+  color: #aaa;
+  font-size: 3em;
+  margin-top: -.8em;
+  @include transform(rotate(-3deg));
+  @include text-shadow(0 1px 1px rgba(0,0,0,0.5));
+}
+
+.page-main {
+  @extend %page;
+
+  background-image: url(/img/page-main.jpg);
+}
+
+.page-about {
+  @extend %page;
+
+  background-image: url(/img/page-about.jpg);
+  .page-subtitle { color: $subtitle-color-about; }
+}
+
+.page-schedule {
+  @extend %page;
+
+  background-image: url(/img/page-schedule.jpg);
+  .page-subtitle { color: $subtitle-color-schedule; }
+}
+
+.page-register {
+  @extend %page;
+
+  background-image: url(/img/page-register.jpg);
+}
+
+.page-sponsors {
+  @extend %page;
+
+  background-image: url(/img/page-sponsors.jpg);
+}
+

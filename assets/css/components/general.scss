@@ -48,3 +48,19 @@
   vertical-align: text-bottom;
   -webkit-font-smoothing: antialiased;
 }
+
+
+%logo-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  text-indent: -9999px;
+
+  display: inline-block;
+  width: 140px;
+  height: 120px;
+
+  img {
+    width: 150px;
+  }
+}
