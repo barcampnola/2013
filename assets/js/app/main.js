@@ -89,7 +89,7 @@ $(function() {
     $(".animated").spritespin("animate", false);
 
     Shifter.navigate(toPage, "moveToLeft", function() {
-      $(".page-" + toPage + " .animated").spritespin("animate", true);
+      $(".page-" + toPage + " .animated").spritespin({"animate": true, "frameTime": 50});
     });
   });
 });
