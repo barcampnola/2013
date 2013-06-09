@@ -1,3 +1,6 @@
+(function(){
+var pawser;
+
 $.fn.preload = function() {
     this.each(function(){
         $('<img/>')[0].src = this;
@@ -18,13 +21,14 @@ $(window).load(function() {
   setTimeout(function() {
     $(".page-loader").fadeOut(1000, function() {
       $(this).remove();
+      pawser&&pawser.stop();
     });
   }, 2000);
 })
 
 
 $(function() {
-  $(".loading-message").pawser();
+  pawser = $(".loading-message").pawser();
 
   $(".main-bear").spritespin({
     source      : "/img/page-main-bear-sprite.png",
@@ -117,4 +121,4 @@ $(function() {
   }
 });
 
-
+})();

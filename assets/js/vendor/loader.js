@@ -1,10 +1,5 @@
 (function(window, $) {
-  var Pawser = function(element, options) {
-    var self = this;
-
-    this.element = $(element);
-    this.loadingMessages =
-    [
+    var loadingMessages = [
       "Partitioning Social Network",
       "Blurring Reality Lines",
       "Searching For The Keymaster",
@@ -63,42 +58,44 @@
       "Reticulating Unreticulated Splines",
       "Recycling Hex Decimals",
       "Interpreting US Copyright Law Violations",
+      "Decoding Rings",
       "Practicing Interpretive Ice Dancing"
     ];
-    this.usedMessages = [];
 
+  var Pawser = function(element, options) {
+    var  self = this
+        ,timer = null
+        ;
+    this.element = $(element);
 
     this.init = function() {
+      this.unUsedMessages = loadingMessages.slice(0);
       this.loadMessage();
 
-      var timer = window.setInterval(function() {
+      timer = window.setInterval(function() {
         self.loadMessage();
       }, 1500);
+      return this;
     };
+    this.stop = function() {
+      window.clearInterval(timer);
+    }
 
     this.loadMessage = function() {
       var randomMessage = this.pickRandomMessage();
-
       this.element.html(randomMessage);
     };
 
     this.pickRandomMessage = function() {
-      var randomMessageIndex = Math.floor(Math.random() * this.loadingMessages.length);
-
-      if (this.usedMessages.indexOf(randomMessageIndex) != -1) {
-        this.pickRandomMessage();
-      }
-      else {
-        this.usedMessages.push(randomMessageIndex);
-
-        return this.loadingMessages[randomMessageIndex];
-      }
+      var  idx = Math.floor(Math.random() * this.unUsedMessages.length)
+      return this.unUsedMessages.splice(idx, 1);
     };
 
     return this;
   };
 
   $.fn.pawser = function(options) {
-    new Pawser(this, options).init();
+    return new Pawser(this, options).init();
   };
+
 })(window, jQuery);
