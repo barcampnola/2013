@@ -1,20 +1,28 @@
-.main-bear {
-  @include bear(424px);
-}
+// .main-bear {
+//   @include bear(424px);
+// }
 
-.about-bear {
-  @include bear(406px);
-}
+// .about-bear {
+//   @include bear(406px);
+// }
 
-.schedule-bear {
-  @include bear(343px);
-}
+// .schedule-bear {
+//   @include bear(343px);
+// }
 
-.register-bear {
-  @include bear(448px);
-}
-
+.main-bear,
+.about-bear,
+.schedule-bear,
+.register-bear,
 .sponsors-bear {
-  position: absolute;
-  bottom: 0;
+  @include bear;//(448px);
 }
+
+.main-bear {
+  @include centered(424px);
+}
+
+// .sponsors-bear {
+//   position: absolute;
+//   bottom: 0;
+// }

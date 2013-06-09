@@ -82,15 +82,22 @@ $(function() {
 
 
   $("[data-page-change]").click(function(e) {
-    e.preventDefault();
+    //e.preventDefault();
 
-    toPage = $(this).attr("data-page-change");
+    pageLink = $(this).addClass('current');
+    pageLink.siblings().removeClass('current');
+
+    toPage = pageLink.attr("data-page-change");
 
     $(".animated").spritespin("animate", false);
 
-    Shifter.navigate(toPage, "moveToLeft", function() {
-      $(".page-" + toPage + " .animated").spritespin("animate", true);
-    });
+    // Shifter.navigate(toPage, "moveToLeft", function() {
+    //   $(".page-" + toPage + " .animated").spritespin("animate", true);
+    // });
+  });
+
+  $(".animated").click(function(e) {
+    $(this).spritespin({"animate": true, "frameTime": 50, "loop": false});
   });
 });
 

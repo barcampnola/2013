@@ -1,16 +1,8 @@
 
 .pages {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   perspective: 1200px;
-}
-
-.page-current {
-  z-index: 1;
 }
 
 .page-title {
@@ -35,16 +27,23 @@
   @include transform(rotate(-3deg));
 }
 
+.page-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
 .page-main {
   @extend %page;
-
+  padding-bottom: 500px;
   background-image: url(/img/page-main.jpg);
 }
 
 .page-about {
   @extend %page;
-
+  padding-bottom: 500px;
   background-image: url(/img/page-about.jpg);
+  background-image: url(/img/page-about-alt.jpg);
 }
 
 .page-schedule {
@@ -63,5 +62,9 @@
   @extend %page;
 
   background-image: url(/img/page-sponsors.jpg);
+}
+
+.btn-primary {
+  @include btn($red);
 }
 

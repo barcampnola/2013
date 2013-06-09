@@ -1,8 +1,9 @@
 .barcamp-logo {
   width: 800px;
+  max-width: 80%;
   display: block;
   margin: 0 auto;
-  z-index: 3;
-  position: relative;
-  top: 20px;
+  z-index: 1;
+  padding-top: 3em;
+  margin-bottom: -3em;
 }

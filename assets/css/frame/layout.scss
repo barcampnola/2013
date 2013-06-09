@@ -6,22 +6,88 @@ body {
   position: relative;
   margin: 0;
   height:100%;
-  // overflow-y: none;
-  overflow-x: none;
   font-family: "Proxima Nova", "Gotham", "Helvetica Neue", Arial, sans-serif;
 }
 
 nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(255,255,255,0.8);
+  position: fixed;
+  right: 1em;
+  top: 1em;
   z-index: 1000;
+  text-align: right;
+}
+
+[data-page-change] {
+  display: block;
+  position: relative;
+  padding: .5em;
+  font-size: .875em;
+
+  &:hover .nav-dot, &.current .nav-dot {
+    opacity: 1;
+  }  
+}
+
+.nav-dot {
+  width: 14px;
+  height: 14px;  
+  display: block;
+  @include border-radius(50%);
+  background: #444;
+  opacity: .5;
+}
+
+.nav-dot, .nav-tooltip {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;  
+}
+
+.nav-tooltip {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -15px;
+  line-height: 30px;
+  background: rgba(50, 50, 50, 0.9);
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 1em;
+  border-radius: 3px;  
+  opacity: 0;
+}
+
+[data-page-change]:hover .nav-tooltip {
+  opacity: 1; 
 }
 
 h2 {
   text-align: center;
   font-size: 1em;
+  margin: 0;
+  padding: 4em 0 2em;
+}
 
-  margin: 4em 0 2em;
+h3 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  letter-spacing: 1px;
+}
+
+.next-section {
+  display: block;
+  margin: 2em auto 0;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  color: white;
+  line-height: 26px;
+  @include border-radius(50%);
+  border: 2px solid #fff;
+  opacity: .75;
+
+  &:hover {
+    opacity: 1;
+  }
 }

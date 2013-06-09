@@ -1,0 +1,19 @@
+.about-page-content {
+  @extend %page-content;
+  white-space: nowrap;
+  margin-left: 50%;
+}
+
+.about-section {
+  background: rgba(255,255,255,0.95);
+  padding: 0 1em;
+  display: inline-block;
+  margin: 1em 2em;
+  width: 360px;
+  height: 400px;
+  min-width: 280px;  
+
+  &:first-child {
+    margin-left: -180px;
+  }
+}

@@ -16,32 +16,64 @@
 </head>
 <body>
   <nav>
-    <a href="#" data-page-change="main">main</a>
-    <a href="#" data-page-change="about">about</a>
-    <a href="#" data-page-change="schedule">schedule</a>
-    <a href="#" data-page-change="register">register</a>
-    <a href="#" data-page-change="sponsors">sponsors</a>
+    <a href="#main" data-page-change="main">
+      <span class="nav-tooltip">main</span>
+      <span class="nav-dot"></span>
+    </a>
+    <a href="#about" data-page-change="about">
+      <span class="nav-tooltip">about</span>
+      <span class="nav-dot"></span>
+    </a>
+    <a href="#schedule" data-page-change="schedule">
+      <span class="nav-tooltip">schedule</span>
+      <span class="nav-dot"></span>
+    </a>
+    <a href="#register" data-page-change="register">
+      <span class="nav-tooltip">register</span>
+      <span class="nav-dot"></span>
+    </a>
+    <a href="#sponsors" data-page-change="sponsors">
+      <span class="nav-tooltip">sponsors</span>
+      <span class="nav-dot"></span>
+    </a>
   </nav>
 
-  <div class="pages">
-    <div class="page-main" data-page="main">
+    <div id="main" class="page-main" data-page="main">
       <img src="/img/barcamp-logo.png" class="barcamp-logo" />
 
+      <div class="page-content">
+        <h3>July 13-14, 2013</h3>
+        <a href="#" class="btn-primary">Register</a>
+        <a href="#" class="next-section">&darr;</a>
+      </div>
       <div class="main-bear animated"></div>
     </div>
 
-    <div class="page-about" data-page="about">
+    <div id="about" class="page-about" data-page="about">
       <h2>
         <span class="page-title">Bearcamp</span>
         <span class="page-subtitle">the unconference</span>
       </h2>
+      <div class="about-page-content">
+        <div class="about-section">
+          <h3>What is Barcamp?</h3>
+          <p>blah blah blah blah</p>
+        </div>
+        <div class="about-section">
+          <h3>Who can present?</h3>
+          <p>blah blah blah blah</p>
+        </div>
+        <div class="about-section">
+          <h3>How does it work?</h3>
+          <p>blah blah blah blah</p>
+        </div>
+      </div>   
       <div class="about-bear animated"></div>
     </div>
 
-    <div class="page-schedule" data-page="schedule">
+    <div id="schedule" class="page-schedule" data-page="schedule">
       <h2>
         <span class="page-title">Schedule</span>
-        <span class="page-subtitle">of events</span>
       </h2>
       <div class="schedule">
         <div class="schedule-day-one">
@@ -127,16 +159,17 @@
       <div class="schedule-bear animated"></div>
     </div>
 
-    <div class="page-register" data-page="register">
+    <div id="register" class="page-register" data-page="register">
       <h2>
         <span class="page-title">Register</span>
       </h2>
       <div class="register-bear animated"></div>
     </div>
 
-    <div class="page-sponsors" data-page="sponsors">
+    <div id="sponsors" class="page-sponsors" data-page="sponsors">
       <h2>
-        <span class="page-title">Sponsors</span>
+        <span class="page-title">Thank You</span>
+        <span class="page-subtitle">to our sponsors!</span>
       </h2>
       <div class="sponsors-container">
         <div class="sponsors" data-slider="sponsors">
@@ -192,7 +225,6 @@
       </div>
       <div class="sponsors-bear animated"></div>
     </div>
-  </div>
 
   <script src="/js/app.js"></script>
 </body>

@@ -1,3 +1,28 @@
+@mixin btn($color) {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background-color: lighten($color, 5%);
+  color: white;
+  font-size: 1.25em;
+  padding: .75em 1em;
+  line-height: 1em;
+  @include border-radius(5px);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: $color;
+    @include box-shadow(0px 2px 0px rgba(0,0,0,0.15));
+  }
+
+  &:active {
+    @include box-shadow(inset 0px 2px 0px rgba(0,0,0,0.15));
+  }
+}
+
+
 @mixin block-link($url) {
   background: url($url) no-repeat center center;
 
@@ -108,6 +133,7 @@
   position: absolute;
   width: $width;
   margin-left: -($width / 2);
+  left: 50%;
 }
 
 @mixin animation-config($name, $timing, $duration, $iteration) {
@@ -117,9 +143,8 @@
   -webkit-animation-iteration-count: $iteration;
 }
 
-@mixin bear($width) {
+@mixin bear {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -($width / 2);
+  bottom: 2em;
+  left: 2em;
 }
