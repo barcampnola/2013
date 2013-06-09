@@ -6,25 +6,11 @@
   margin: 0 10px;
 }
 
-%schedule-day {
-  width: 44%;
-}
-
 .schedule {
   @extend %clearfix;
 
+  width: 600px;
   padding: 30px;
-}
-
-.schedule-day-one {
-  @extend %schedule-day;
-
-  float: left;
-}
-
-.schedule-day-two {
-  @extend %schedule-day;
-
   float: right;
 }
 
@@ -37,6 +23,8 @@
 }
 
 .schedule-item {
+  @extend %clearfix;
+
   border-top: 1px solid black;
 
   padding: 10px 0;

@@ -14,28 +14,45 @@
   <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 
 </head>
-<body>
+<body data-spy="scroll" data-target="nav">
+  <div class="page-loader">
+    <img src="/img/barcamp-head.png" />
+
+    <div class="loading-message">Loading App</div>
+  </div>
   <nav>
-    <a href="#main">
-      <span class="nav-tooltip">main</span>
-      <span class="nav-dot"></span>
-    </a>
-    <a href="#about">
-      <span class="nav-tooltip">about</span>
-      <span class="nav-dot"></span>
-    </a>
-    <a href="#schedule">
-      <span class="nav-tooltip">schedule</span>
-      <span class="nav-dot"></span>
-    </a>
-    <a href="#register">
-      <span class="nav-tooltip">register</span>
-      <span class="nav-dot"></span>
-    </a>
-    <a href="#sponsors">
-      <span class="nav-tooltip">sponsors</span>
-      <span class="nav-dot"></span>
-    </a>
+    <ul class="nav">
+      <li>
+        <a href="#main">
+          <span class="nav-tooltip">main</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <span class="nav-tooltip">about</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#schedule">
+          <span class="nav-tooltip">schedule</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#register">
+          <span class="nav-tooltip">register</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#sponsors">
+          <span class="nav-tooltip">sponsors</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+    </ul>
   </nav>
 
     <div id="main" class="page-main">
@@ -44,9 +61,9 @@
       <div class="page-content">
         <h3>July 13-14, 2013</h3>
         <a href="#" class="btn-primary">Register</a>
-        <a href="#" class="next-section">&darr;</a>
+        <a href="#about" class="next-section">&darr;</a>
       </div>
-      <div class="main-bear animated"></div>
+      <div class="main-bear animated" data-bear="main"></div>
 
       <hr class="page-divider" />
     </div>
@@ -93,7 +110,7 @@
           </li>
         </ul>
       </div>
-      <div class="about-bear animated"></div>
+      <div class="about-bear animated" data-bear="about"></div>
 
       <hr class="page-divider" />
     </div>
@@ -183,7 +200,7 @@
         </div>
       </div>
 
-      <div class="schedule-bear animated"></div>
+      <div class="schedule-bear animated" data-bear="schedule"></div>
 
       <hr class="page-divider" />
     </div>
@@ -192,7 +209,7 @@
       <h2>
         <span class="page-title">Register</span>
       </h2>
-      <div class="register-bear animated"></div>
+      <div class="register-bear animated" data-bear="register"></div>
 
       <hr class="page-divider" />
     </div>
@@ -254,16 +271,18 @@
         </div>
 
       </div>
-      <div class="sponsors-bear animated"></div>
+      <div class="sponsors-bear animated" data-bear="sponsors"></div>
 
       <hr class="page-divider" />
     </div>
 
   <script src="/js/vendor/jquery.js"></script>
   <script src="/js/vendor/modernizr.js"></script>
+  <script src="/js/vendor/pawser.js"></script>
   <script src="/js/vendor/spritespin.js"></script>
   <script src="/js/vendor/transitions.js"></script>
   <script src="/js/vendor/unslider.js"></script>
+  <script src="/js/vendor/bootstrap-scrollspy.js"></script>
   <script src="/js/app/main.js"></script>
   <!-- <script src="/js/app.js"></script> -->
 </body>
