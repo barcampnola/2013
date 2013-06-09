@@ -32,7 +32,7 @@ nav {
 
 .nav-dot {
   width: 14px;
-  height: 14px;  
+  height: 14px;
   display: block;
   @include border-radius(50%);
   background: #333;
@@ -42,7 +42,7 @@ nav {
 .nav-dot, .nav-tooltip {
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;  
+  transition: all .2s ease-in-out;
 }
 
 .nav-tooltip {
@@ -56,12 +56,12 @@ nav {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0 1em;
-  border-radius: 3px;  
+  border-radius: 3px;
   opacity: 0;
 }
 
 [data-page-change]:hover .nav-tooltip {
-  opacity: 1; 
+  opacity: 1;
 }
 
 h2 {
