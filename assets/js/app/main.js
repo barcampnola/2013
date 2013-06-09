@@ -90,23 +90,31 @@ $(function() {
     behavior    : "none"
   });
 
-  $("[data-page]").shifter();
-
+  var pageTransitions = $("[data-page]").shifter();
 
   $('[data-slider]').unslider();
 
 
-  $("[data-page-change]").click(function(e) {
+  $("[data-page-change]").click(function changePage(e) {
     e.preventDefault();
 
-    toPage = $(this).attr("data-page-change");
+    var toPage = $(this).attr("data-page-change");
 
     $(".page-current .animated").spritespin("animate", false);
 
-    Shifter.navigate(toPage, "moveToLeft", function() {
+    var animationType = isToRight(toPage) ? "moveToLeft" : "moveToRight";
+
+    pageTransitions.navigate(toPage, animationType, function() {
       $(".page-" + toPage + " .animated").spritespin("animate", true);
     });
   });
+
+  function isToRight(toPage) {
+    for(var i=0; i<pageTransitions.current;i+=1)
+      if(pageTransitions.pages.eq(i).data('page') === toPage)
+        return false;
+    return true;
+  }
 });
 
 
