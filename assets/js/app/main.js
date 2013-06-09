@@ -75,11 +75,11 @@
       behavior    : "none"
     });
 
-    $("[data-page]").shifter();
+    $("[data-slider='about']").unslider({'dots': true});
 
     $("[data-slider='sponsors']").unslider();
 
-    $("[data-page-change], .next-section").click(function(e) {
+    $("nav a, .next-section").click(function(e) {
       e.preventDefault();
       var page = this.hash,
           target = $(page);
@@ -89,7 +89,6 @@
       }, 900, 'swing', function () {
           window.location.hash = page;
       });
-
     });
 
     var delayedStart;

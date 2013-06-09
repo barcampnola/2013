@@ -1,19 +1,46 @@
-.about-page-content {
-  @extend %page-content;
-  white-space: nowrap;
-  margin-left: 50%;
+.page-about {
+  overflow: hidden;
 }
 
-.about-section {
-  background: rgba(255,255,255,0.95);
-  padding: 0 1em;
-  display: inline-block;
-  margin: 1em 2em;
-  width: 360px;
-  height: 400px;
-  min-width: 280px;  
+.about-slider {
+  @extend %clearfix;
+  position: relative;
+  overflow: visible !important;
+  width: 50%;
+  max-width: 460px;
+  margin: 0 auto;
+  text-align: center;
 
-  &:first-child {
-    margin-left: -180px;
+  ul {
+    margin: 0;
   }
+}
+
+.about-slider .about-item {
+  float: left;
+  list-style: none;
+  padding: 0 2em 1em;
+  width: 360px;
+  min-width: 280px;  
+  height: 430px;
+}
+
+.about-item-content {
+  background: rgba(255,255,255,0.95);
+  padding: 1em;
+  height: 100%;
+  position: relative;
+  @include box-shadow(0px 1px 5px rgba(0,0,0,0.2));
+
+  p {
+    font-size: 1.125em;  
+  } 
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.about-bear {
+  @include horizontalFlip;
 }
