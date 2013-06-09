@@ -1,0 +1,22 @@
+.page-schedule {
+  @extend %page;
+
+  background-image: url(/img/cooking/Cooking-Background-No-Clouds.jpg);
+  // background-image: url(/img/page-schedule.jpg);
+
+  .cloud-1 {
+    @include animated-background-element('/img/cooking/cloud-1.png', 208px, 60px, 151px, 130px);
+  }
+  .cloud-2 {
+    @include animated-background-element('/img/cooking/cloud-2.png', 196px, 101px, 193px, 333px);
+  }
+  .cloud-3 {
+    @include animated-background-element('/img/cooking/cloud-3.png', 97px, 55px, 129px, 1452px);
+  }
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(131, 75%, 22%);
+  }
+}

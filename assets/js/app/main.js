@@ -104,4 +104,7 @@
       }, 300);
     });
   });
+
+  $('.animated-background-element').animateElement();
+
 })();
