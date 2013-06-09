@@ -29,7 +29,6 @@ $(function() {
 
   $(".about-bear").spritespin({
     source      : "/img/page-about-bear-sprite.png",
-    animate     : false,
     width       : 406,
     height      : 500,
     frames      : 30,
@@ -41,7 +40,6 @@ $(function() {
 
   $(".schedule-bear").spritespin({
     source      : "/img/page-schedule-bear-sprite.png",
-    animate     : false,
     width       : 343,
     height      : 500,
     frames      : 48,
@@ -53,7 +51,6 @@ $(function() {
 
   $(".register-bear").spritespin({
     source      : "/img/page-register-bear-sprite.png",
-    animate     : false,
     width       : 448,
     height      : 550,
     frames      : 54,
@@ -65,7 +62,6 @@ $(function() {
 
   $(".sponsors-bear").spritespin({
     source      : "/img/page-sponsors-bear-sprite.png",
-    animate     : false,
     width       : 507,
     height      : 450,
     frames      : 24,
@@ -77,19 +73,29 @@ $(function() {
 
   $("[data-page]").shifter();
 
+  $("[data-slider='sponsors']").unslider();
 
-  $('[data-slider]').unslider();
-
+  // $("[data-slider='about']").unslider();
 
   $("[data-page-change]").click(function(e) {
-    //e.preventDefault();
+    e.preventDefault();
+    var page = this.hash,
+        target = $(page);
+
+    $('html, body').stop().animate({
+        'scrollTop': target.offset().top
+    }, 900, 'swing', function () {
+        window.location.hash = page;
+    });
+
+
 
     pageLink = $(this).addClass('current');
     pageLink.siblings().removeClass('current');
 
     toPage = pageLink.attr("data-page-change");
 
-    $(".animated").spritespin("animate", false);
+    // $(".animated").spritespin("animate", false);
 
     // Shifter.navigate(toPage, "moveToLeft", function() {
     //   $(".page-" + toPage + " .animated").spritespin("animate", true);
