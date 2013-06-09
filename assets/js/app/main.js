@@ -89,7 +89,6 @@ $(function() {
     });
 
 
-
     pageLink = $(this).addClass('current');
     pageLink.siblings().removeClass('current');
 
@@ -105,6 +104,9 @@ $(function() {
   $(".animated").click(function(e) {
     $(this).spritespin({"animate": true, "frameTime": 50, "loop": false});
   });
+
+  $('.animated-background-element').animateElement();
+
 });
 
 

@@ -148,3 +148,11 @@
   bottom: 2em;
   left: 2em;
 }
+
+@mixin animated-background-element($url, $width, $height, $top:0, $left:0) {
+  background: url($url) no-repeat center center;
+  top: 100% * ($top / $page-height);
+  left: 100% * ($left / $page-width);
+  width: $width;
+  height: $height;
+}

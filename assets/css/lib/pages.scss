@@ -11,9 +11,9 @@
 }
 
 .pages {
-  -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
-  perspective: 1200px;
+  -webkit-perspective: $page-height;
+  -moz-perspective: $page-height;
+  perspective: $page-height;
 }
 
 .page-title {
@@ -69,18 +69,6 @@
   }
 }
 
-.page-schedule {
-  @extend %page;
-
-  background-image: url(/img/page-schedule.jpg);
-
-  .page-divider {
-    @extend %page-divider;
-
-    background-color: hsl(131, 75%, 22%);
-  }
-}
-
 .page-register {
   @extend %page;
 
@@ -109,3 +97,7 @@
   @include btn($red);
 }
 
+.animated-background-element {
+  display: inline-block;
+  position: absolute;
+}
