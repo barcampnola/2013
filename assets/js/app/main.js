@@ -76,7 +76,7 @@ $(function() {
 
   // $("[data-slider='about']").unslider();
 
-  $("[data-page-change]").click(function(e) {
+  $("[data-page-change], .next-section").click(function(e) {
     e.preventDefault();
     var page = this.hash,
         target = $(page);
@@ -87,13 +87,6 @@ $(function() {
         window.location.hash = page;
     });
 
-
-
-    pageLink = $(this).addClass('current');
-    pageLink.siblings().removeClass('current');
-
-    toPage = pageLink.attr("data-page-change");
-
     // $(".animated").spritespin("animate", false);
 
     // Shifter.navigate(toPage, "moveToLeft", function() {
@@ -101,8 +94,17 @@ $(function() {
     // });
   });
 
-  $(".animated").click(function(e) {
-    $(this).spritespin({"animate": true, "frameTime": 50, "loop": false});
+  var delayedStart;
+
+  $(".nav li").on('activate', function() {
+    $('.animated').spritespin('animate', false);
+    clearTimeout(delayedStart);
+
+    var page = $(this).find('a')[0].hash;
+
+    delayedStart = setTimeout(function() {
+      $(page + ' .animated').spritespin('animate', true);
+    }, 300);
   });
 });
 
