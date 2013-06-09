@@ -75,7 +75,7 @@
       behavior    : "none"
     });
 
-    $("[data-slider='about']").unslider({'dots': true});
+    var aboutSlider = $("[data-slider='about']").unslider({'dots': true}).data('unslider').stop();
 
     $("[data-slider='sponsors']").unslider();
 
