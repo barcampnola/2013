@@ -77,7 +77,13 @@
 
     $("[data-slider='sponsors']").unslider();
 
-    $("[data-slider='about']").unslider({dots: true, delay: false});
+    var aboutSlider = $("[data-slider='about']").unslider({dots: true, delay: false}),
+        aboutData = aboutSlider.data('unslider');
+
+    $("[data-slider='about'] li").click(function(e) {
+      var i = $(this).index();
+      aboutData.move(i);
+    });
 
     $("nav a, .next-section").click(function(e) {
       e.preventDefault();

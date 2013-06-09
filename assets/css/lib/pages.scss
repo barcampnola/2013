@@ -37,7 +37,7 @@
   text-transform: uppercase;
   z-index: 2;
   position: relative;
-  @include text-shadow(-3px 3px 0px rgba(255,255,255,0.5));
+  @include text-shadow(-3px 3px 0px rgba(0,0,0,0.2));
 }
 
 .page-subtitle {
