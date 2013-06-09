@@ -75,9 +75,9 @@
       behavior    : "none"
     });
 
-    var aboutSlider = $("[data-slider='about']").unslider({'dots': true}).data('unslider').stop();
-
     $("[data-slider='sponsors']").unslider();
+
+    $("[data-slider='about']").unslider({dots: true, delay: false});
 
     $("nav a, .next-section").click(function(e) {
       e.preventDefault();
