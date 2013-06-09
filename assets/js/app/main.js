@@ -71,11 +71,9 @@ $(function() {
     behavior    : "none"
   });
 
-  $("[data-page]").shifter();
+  $("[data-slider='about']").unslider({'dots': true});
 
   $("[data-slider='sponsors']").unslider();
-
-  // $("[data-slider='about']").unslider();
 
   $("[data-page-change]").click(function(e) {
     e.preventDefault();

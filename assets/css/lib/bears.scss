@@ -1,28 +1,11 @@
-// .main-bear {
-//   @include bear(424px);
-// }
-
-// .about-bear {
-//   @include bear(406px);
-// }
-
-// .schedule-bear {
-//   @include bear(343px);
-// }
-
 .main-bear,
 .about-bear,
 .schedule-bear,
 .register-bear,
 .sponsors-bear {
-  @include bear;//(448px);
+  @include bear;
 }
 
 .main-bear {
   @include centered(424px);
 }
-
-// .sponsors-bear {
-//   position: absolute;
-//   bottom: 0;
-// }

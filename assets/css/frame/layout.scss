@@ -17,7 +17,7 @@ nav {
   text-align: right;
 }
 
-[data-page-change] {
+nav a {
   display: block;
   position: relative;
   padding: .5em;
@@ -58,7 +58,7 @@ nav {
   opacity: 0;
 }
 
-[data-page-change]:hover .nav-tooltip {
+nav a:hover .nav-tooltip {
   opacity: 1; 
 }
 
@@ -89,5 +89,37 @@ h3 {
 
   &:hover {
     opacity: 1;
+  }
+}
+
+.dots {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 20px;
+}
+
+.dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background: #444;
+
+  text-indent: -999em;
+  
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: .5;
+  
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  &.active {
+    opacity: 1;    
   }
 }
