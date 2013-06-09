@@ -1,3 +1,14 @@
+%page-divider {
+  border: 0px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 14px;
+}
 
 .pages {
   -webkit-perspective: 1200px;
@@ -37,6 +48,12 @@
   @extend %page;
   padding-bottom: 500px;
   background-image: url(/img/page-main.jpg);
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(194, 100%, 34%);
+  }
 }
 
 .page-about {
@@ -44,24 +61,48 @@
   padding-bottom: 500px;
   background-image: url(/img/page-about.jpg);
   background-image: url(/img/page-about-alt.jpg);
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(346, 100%, 34%);
+  }
 }
 
 .page-schedule {
   @extend %page;
 
   background-image: url(/img/page-schedule.jpg);
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(131, 75%, 22%);
+  }
 }
 
 .page-register {
   @extend %page;
 
   background-image: url(/img/page-register.jpg);
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(41, 94%, 20%);
+  }
 }
 
 .page-sponsors {
   @extend %page;
 
   background-image: url(/img/page-sponsors.jpg);
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(296, 83%, 19%);
+  }
 }
 
 .btn-primary {
