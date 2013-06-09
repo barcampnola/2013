@@ -13,10 +13,9 @@ $.fn.preload = function() {
 // ]).preload();
 
 
-
 $(function() {
 
-  $(".main-bear").spritespin({
+  $("[data-bear=main]").spritespin({
     source      : "/img/page-main-bear-sprite.png",
     width       : 424,
     height      : 550,
@@ -27,7 +26,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".about-bear").spritespin({
+  $("[data-bear=about]").spritespin({
     source      : "/img/page-about-bear-sprite.png",
     width       : 406,
     height      : 500,
@@ -38,7 +37,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".schedule-bear").spritespin({
+  $("[data-bear=schedule]").spritespin({
     source      : "/img/page-schedule-bear-sprite.png",
     width       : 343,
     height      : 500,
@@ -49,7 +48,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".register-bear").spritespin({
+  $("[data-bear=register]").spritespin({
     source      : "/img/page-register-bear-sprite.png",
     width       : 448,
     height      : 550,
@@ -60,7 +59,7 @@ $(function() {
     behavior    : "none"
   });
 
-  $(".sponsors-bear").spritespin({
+  $("[data-bear=sponsors]").spritespin({
     source      : "/img/page-sponsors-bear-sprite.png",
     width       : 507,
     height      : 450,
