@@ -10,6 +10,18 @@
   height: 14px;
 }
 
+.page-loader {
+  position: fixed;
+  min-height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #78acba;
+  text-align: center;
+}
+
 .pages {
   -webkit-perspective: $page-height;
   -moz-perspective: $page-height;

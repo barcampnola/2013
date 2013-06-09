@@ -145,8 +145,8 @@
 
 @mixin bear {
   position: absolute;
-  bottom: 2em;
-  left: 2em;
+  bottom: 4em;
+  left: 10%;
 }
 
 @mixin animated-background-element($url, $width, $height, $top:0, $left:0) {
