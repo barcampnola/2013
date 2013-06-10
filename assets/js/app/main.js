@@ -178,6 +178,17 @@
         }
       });
 
+      // Find the tallest section, and make them all that tall.
+      var maxHeight = 0;
+      aboutSlider.find("ul li").each(function(e) {
+        height = $(this).outerHeight();
+        console.log(height);
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      }).css('height', maxHeight);
+
+
   //   // To allow the slide to keep step with the finger,
   //   // temporarily disable transitions.
   //   wrap.addClass('notransition');
