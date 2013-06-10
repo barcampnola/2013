@@ -4,6 +4,9 @@
   width: 18px;
   height: 18px;
   margin: 0 10px;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 .cloud-1 {
@@ -16,29 +19,60 @@
   @include animated-background-element('/img/cooking/cloud-3.png', 97px, 55px, 129px, 1452px);
 }
 
+.cloud-1,
+.cloud-2,
+.cloud-3 {
+  @media only screen and (max-width: 600px) {
+    @include transform(scale(.5));
+  } 
+}
+
 .schedule {
   @extend %clearfix;
+  width: 50%;
+  min-width: 420px;
+  max-width: 600px;
+  padding: 2em;
+  margin-left: 50%;
 
-  width: 600px;
-  margin-right: 70px;
-  float: right;
+  @media only screen and (max-width: 480px) {
+    padding: 1em;
+    width: 100%;
+    min-width: 100%;
+    font-size: .75em;
+    margin-left: 0;
+  }
+  //margin-right: 70px;
 }
 
 .schedule-list {
-  @include border-radius(5px);
+  @include border-radius(2px);
 
   background: hsl(87, 87%, 94%);
   background-clip: padding-box;
   border: 9px solid hsla(69, 87%, 12%, 0.32);
   opacity: 0.94;
+
+  @media only screen and (max-width: 480px) {
+    border: none;
+  }
 }
 
 .schedule-item {
   @extend %clearfix;
 
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(0,0,0,0.2);
 
   padding: 10px 0;
+
+  @media only screen and (max-width: 480px) {
+    padding: 1em;
+
+    strong {
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
 
   &:first-child {
     border-top: 0px;

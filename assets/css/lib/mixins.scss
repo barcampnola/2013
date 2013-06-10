@@ -151,6 +151,15 @@
   -webkit-animation-iteration-count: $iteration;
 }
 
+@mixin bear {
+  position: absolute;
+  bottom: 4em;
+  left: 10%;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
 @mixin animated-background-element($url, $width, $height, $top:0, $left:0) {
   background: url($url) no-repeat center center;
   top: 100% * ($top / $page-height);
