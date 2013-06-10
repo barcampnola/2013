@@ -70,9 +70,11 @@
 
 .page-about {
   @extend %page;
-  padding-bottom: 300px;
+
   background-image: url(/img/page-about.jpg);
   background-image: url(/img/page-about-alt.jpg);
+
+  padding-bottom: 300px;
 
   .page-divider {
     @extend %page-divider;
@@ -80,6 +82,21 @@
     background-color: hsl(346, 100%, 34%);
   }
 }
+
+.page-schedule {
+  @extend %page;
+
+  background-image: url(/img/cooking/Cooking-Background-No-Clouds.jpg);
+
+  padding-bottom: 100px;
+
+  .page-divider {
+    @extend %page-divider;
+
+    background-color: hsl(131, 75%, 22%);
+  }
+}
+
 
 .page-register {
   @extend %page;

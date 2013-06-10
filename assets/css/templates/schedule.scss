@@ -6,19 +6,30 @@
   margin: 0 10px;
 }
 
+.cloud-1 {
+  @include animated-background-element('/img/cooking/cloud-1.png', 208px, 60px, 151px, 130px);
+}
+.cloud-2 {
+  @include animated-background-element('/img/cooking/cloud-2.png', 196px, 101px, 193px, 333px);
+}
+.cloud-3 {
+  @include animated-background-element('/img/cooking/cloud-3.png', 97px, 55px, 129px, 1452px);
+}
+
 .schedule {
   @extend %clearfix;
 
   width: 600px;
-  padding: 30px;
+  margin-right: 70px;
   float: right;
 }
 
 .schedule-list {
   @include border-radius(5px);
 
-  background: #fff;
-  border: 9px solid hsla(70, 88%, 31%, 0.8);
+  background: hsl(87, 87%, 94%);
+  background-clip: padding-box;
+  border: 9px solid hsla(69, 87%, 12%, 0.32);
   opacity: 0.94;
 }
 
