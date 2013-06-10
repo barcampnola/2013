@@ -1,9 +1,46 @@
-.main-bear,
-.about-bear,
-.schedule-bear,
-.register-bear,
+.main-bear {
+  @extend %bear;
+
+  background: url(/img/page-main-bear-sprite.png);
+
+  width: 424px;
+  height: 550px;
+}
+
+.about-bear {
+  @extend %bear;
+
+  background: url(/img/page-about-bear-sprite.png);
+
+  width: 406px;
+  height: 500px;
+}
+
+.schedule-bear {
+  @extend %bear;
+
+  background: url(/img/page-schedule-bear-sprite.png);
+
+  width: 343px;
+  height: 500px;
+}
+
+.register-bear {
+  @extend %bear;
+
+  background: url(/img/page-register-bear-sprite.png);
+
+  width: 405px;
+  height: 500px;
+}
+
 .sponsors-bear {
   @extend %bear;
+
+  background: url(/img/page-sponsors-bear-sprite.png);
+
+  width: 507px;
+  height: 450px;
 }
 
 .main-bear {
@@ -19,3 +56,37 @@
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+
+
+
+
+
+      // source      : "/img/page-main-bear-sprite.png",
+      // width       : 424,
+      // height      : 550,
+      // frames      : 21,
+      // framesX     : 3,
+
+      // source      : "/img/page-about-bear-sprite.png",
+      // width       : 406,
+      // height      : 500,
+      // frames      : 30,
+      // framesX     : 6,
+
+      // source      : "/img/page-schedule-bear-sprite.png",
+      // width       : 343,
+      // height      : 500,
+      // frames      : 48,
+      // framesX     : 8,
+
+      // source      : "/img/page-register-bear-sprite.png",
+      // width       : 448,
+      // height      : 550,
+      // frames      : 54,
+      // framesX     : 6,
+
+      // source      : "/img/page-sponsors-bear-sprite.png",
+      // width       : 507,
+      // height      : 450,
+      // frames      : 24,
+      // framesX     : 6,

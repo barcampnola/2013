@@ -55,7 +55,7 @@
     </ul>
   </nav>
 
-    <div id="main" class="page-main">
+    <div id="main" class="page-main" data-page="main">
       <img src="/img/barcamp-logo.png" class="barcamp-logo" />
 
       <div class="page-content">
@@ -63,12 +63,12 @@
         <a href="#" class="btn-primary">Register</a>
         <a href="#about" class="next-section">&darr;</a>
       </div>
-      <div class="main-bear animated" data-bear="main"></div>
+      <div id="main-bear" class="main-bear animated" data-bear="main"></div>
 
       <hr class="page-divider" />
     </div>
 
-    <div id="about" class="page-about">
+    <div id="about" class="page-about" data-page="about">
       <h2>
         <span class="page-title">Bearcamp</span>
         <span class="page-subtitle">the unconference</span>
@@ -124,12 +124,12 @@
           </li>
         </ul>
       </div>
-      <div class="about-bear animated" data-bear="about"></div>
+      <div id="about-bear" class="about-bear animated" data-bear="about"></div>
 
       <hr class="page-divider" />
     </div>
 
-    <div id="schedule" class="page-schedule">
+    <div id="schedule" class="page-schedule" data-page="schedule">
       <h2>
         <span class="page-title">Schedule</span>
       </h2>
@@ -219,21 +219,21 @@
         </div>
       </div>
 
-      <div class="schedule-bear animated" data-bear="schedule"></div>
+      <div id="schedule-bear" class="schedule-bear animated" data-bear="schedule"></div>
 
       <hr class="page-divider" />
     </div>
 
-    <div id="register" class="page-register">
+    <div id="register" class="page-register" data-page="register">
       <h2>
         <span class="page-title">Register</span>
       </h2>
-      <div class="register-bear animated" data-bear="register"></div>
+      <div id="register-bear" class="register-bear animated" data-bear="register"></div>
 
       <hr class="page-divider" />
     </div>
 
-    <div id="sponsors" class="page-sponsors">
+    <div id="sponsors" class="page-sponsors" data-page="sponsors">
       <h2>
         <span class="page-title">Thank You</span>
         <span class="page-subtitle">to our sponsors!</span>
@@ -290,7 +290,7 @@
         </div>
 
       </div>
-      <div class="sponsors-bear animated" data-bear="sponsors"></div>
+      <div id="sponsors-bear" class="sponsors-bear animated" data-bear="sponsors"></div>
 
       <hr class="page-divider" />
     </div>
@@ -299,6 +299,8 @@
   <script src="/js/vendor/underscore-min.js"></script>
   <script src="/js/vendor/modernizr.js"></script>
   <script src="/js/vendor/pawser.js"></script>
+  <script src="/js/vendor/motio.js"></script>
+
   <script src="/js/vendor/spritespin.js"></script>
   <script src="/js/vendor/transitions.js"></script>
   <script src="/js/vendor/unslider.js"></script>
