@@ -2,8 +2,6 @@
   var pawser;
 
   $(window).load(function() {
-    // $(".page-current .animated").spritespin("animate", true);
-
     setTimeout(function() {
       $(".page-loader").fadeOut(1000, function() {
         $(this).remove();
@@ -13,67 +11,147 @@
   })
 
   $(function() {
+
+    // window.pageLocations = []
+
+    // $("[data-page]").each(function(index, element) {
+    //   var name = $(element).data("page");
+
+    //   pageLocations.push = $(element).offset().top;
+    // });
+
+    $(window).scroll(function() {
+      // var position = $(window).scrollTop();
+
+      // $("[data-bear]").each(function() {
+      //   if (isScrolledIntoView(this)) {
+      //     $(this).spritespin("animate", true);
+      //   }
+      //   else {
+      //     $(this).spritespin("animate", false);
+      //   }
+      // })
+
+      // $.each(pageLocations, function(index, value) {
+      //   previousPage = pageLocations[index-1];
+
+      //   _.find(pageLocations, function(value) { return value > position });
+      //   if (position > ) stop animation
+
+      // });
+
+
+
+
+    });
+
+    // function isScrolledIntoView(element) {
+    //   var documentTop = $(window).scrollTop();
+    //   var documentBottom = documentTop + $(window).height();
+
+    //   var elementTop = $(element).offset().top;
+    //   var elementBottom = elementTop + $(element).height();
+
+    //   return ((elementTop <= documentBottom) && (elementBottom >= documentTop));
+    // }
+
+
     pawser = $(".loading-message").pawser();
 
-    $("[data-bear=main]").spritespin({
-      source      : "/img/page-main-bear-sprite.png",
-      width       : 424,
-      height      : 550,
-      frames      : 21,
-      framesX     : 3,
-      // animate     : false,
-      loop        : true,
-      module      : "360",
-      behavior    : "none"
+    var mainBear = new Motio(document.getElementById('main-bear'), {
+      fps: 15,
+      frames: 21,
+      vertical: true
     });
+    mainBear.play();
 
-    $("[data-bear=about]").spritespin({
-      source      : "/img/page-about-bear-sprite.png",
-      width       : 406,
-      height      : 500,
-      frames      : 30,
-      framesX     : 6,
-      // animate     : false,
-      loop        : true,
-      module      : "360",
-      behavior    : "none"
+    var aboutBear = new Motio(document.getElementById('about-bear'), {
+      fps: 15,
+      frames: 30,
+      vertical: true
     });
+    aboutBear.play();
 
-    $("[data-bear=schedule]").spritespin({
-      source      : "/img/page-schedule-bear-sprite.png",
-      width       : 343,
-      height      : 500,
-      frames      : 48,
-      framesX     : 8,
-      // animate     : false,
-      loop        : true,
-      module      : "360",
-      behavior    : "none"
+    var scheduleBear = new Motio(document.getElementById('schedule-bear'), {
+      fps: 15,
+      frames: 25,
+      vertical: true
     });
+    scheduleBear.play();
 
-    $("[data-bear=register]").spritespin({
-      source      : "/img/page-register-bear-sprite.png",
-      width       : 448,
-      height      : 550,
-      frames      : 54,
-      framesX     : 6,
-      // animate     : false,
-      loop        : true,
-      module      : "360",
-      behavior    : "none"
+    var registerBear = new Motio(document.getElementById('register-bear'), {
+      fps: 15,
+      frames: 43,
+      vertical: true
     });
+    registerBear.play();
 
-    $("[data-bear=sponsors]").spritespin({
-      source      : "/img/page-sponsors-bear-sprite.png",
-      width       : 507,
-      height      : 450,
-      frames      : 24,
-      framesX     : 6,
-      loop        : true,
-      // animate     : false,
-      module      : "360",
-      behavior    : "none"
+    var sponsorsBear = new Motio(document.getElementById('sponsors-bear'), {
+      fps: 15,
+      frames: 24,
+      vertical: true
     });
+    sponsorsBear.play();
+
+    // $("[data-bear=main]").spritespin({
+    //   source      : "/img/page-main-bear-sprite.png",
+    //   width       : 424,
+    //   height      : 550,
+    //   frames      : 21,
+    //   framesX     : 3,
+    //   animate     : false,
+    //   loop        : true,
+    //   module      : "360",
+    //   behavior    : "none"
+    // });
+
+    // $("[data-bear=about]").spritespin({
+    //   source      : "/img/page-about-bear-sprite.png",
+    //   width       : 406,
+    //   height      : 500,
+    //   frames      : 30,
+    //   framesX     : 6,
+    //   animate     : false,
+    //   loop        : true,
+    //   module      : "360",
+    //   behavior    : "none"
+    // });
+
+    // $("[data-bear=schedule]").spritespin({
+    //   source      : "/img/page-schedule-bear-sprite.png",
+    //   width       : 343,
+    //   height      : 500,
+    //   frames      : 48,
+    //   framesX     : 8,
+    //   animate     : false,
+    //   loop        : true,
+    //   module      : "360",
+    //   behavior    : "none"
+    // });
+
+    // $("[data-bear=register]").spritespin({
+    //   source      : "/img/page-register-bear-sprite.png",
+    //   width       : 448,
+    //   height      : 550,
+    //   frames      : 54,
+    //   framesX     : 6,
+    //   animate     : false,
+    //   loop        : true,
+    //   module      : "360",
+    //   behavior    : "none"
+    // });
+
+    // $("[data-bear=sponsors]").spritespin({
+    //   source      : "/img/page-sponsors-bear-sprite.png",
+    //   width       : 507,
+    //   height      : 450,
+    //   frames      : 24,
+    //   framesX     : 6,
+    //   loop        : true,
+    //   animate     : false,
+    //   module      : "360",
+    //   behavior    : "none"
+    // });
 
     $("[data-slider='sponsors']").unslider();
 
@@ -131,7 +209,7 @@
 
   // .on('moveend', function(e) {
   //   wrap.removeClass('notransition');
-    
+
   //   slides[i].style.left = '';
 
   //   if (slides[i+1]) {
