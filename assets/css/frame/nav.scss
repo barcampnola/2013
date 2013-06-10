@@ -65,16 +65,35 @@ nav a {
   top: 50%;
   margin-top: -15px;
   line-height: 30px;
-  background: rgba(50, 50, 50, 0.9);
+  background: #444;
   color: #FFF;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0 1em;
   border-radius: 3px;
   opacity: 0;
+
   @media only screen and (max-width: 600px) {
     display: none;
   }
+
+  &:after {
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:after {
+    border-color: rgba(68, 68, 68, 0);
+    border-left-color: #444;
+    border-width: 6px;
+    top: 50%;
+    margin-top: -6px;
+  }  
 }
 
 nav a:hover .nav-tooltip {
