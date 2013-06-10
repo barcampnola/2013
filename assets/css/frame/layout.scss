@@ -61,7 +61,7 @@ nav a {
 }
 
 nav a:hover .nav-tooltip {
-  opacity: 1; 
+  opacity: 1;
 }
 
 h2 {
@@ -108,16 +108,32 @@ h3 {
   background: #444;
 
   text-indent: -999em;
-  
+
   border-radius: 6px;
   cursor: pointer;
   opacity: .5;
-  
+
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 
   &.active {
-    opacity: 1;    
+    opacity: 1;
+  }
+}
+
+.loading-logo {
+  margin-top: 40px;
+}
+
+.loading-message {
+  color: hsl(195, 98%, 20%);
+  letter-spacing: -1px;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: hsla(0, 100%, 100%, 0.4) 1px 1px 1px;
+
+  &:after {
+    content: "...";
   }
 }
