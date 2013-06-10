@@ -13,6 +13,7 @@ nav {
     right: 0;
     width: 100%;
     background: #fff;
+    @include box-shadow(0 -1px 2px rgba(0,0,0,0.15));
     text-align: center;
 
     ul {
@@ -34,6 +35,7 @@ nav {
 .active, nav a:hover {
   .nav-dot {
     opacity: 1;
+    @include transform(scale(1));
   }
 }
 
@@ -51,12 +53,13 @@ nav a {
   @include border-radius(50%);
   background: #333;
   opacity: .25;
+  @include transform(scale(.75));
 }
 
 .nav-dot, .nav-tooltip {
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
 }
 
 .nav-tooltip {
