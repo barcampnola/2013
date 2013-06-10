@@ -1,0 +1,82 @@
+
+nav {
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+  text-align: right;
+
+  @media only screen and (max-width: 600px) {
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+
+    ul {
+      margin: .5em 0;
+    }
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .nav-dot {
+      width: 10px;
+      height: 10px;
+    }
+  }  
+}
+
+.active, nav a:hover {
+  .nav-dot {
+    opacity: 1;
+  }
+}
+
+nav a {
+  display: block;
+  position: relative;
+  padding: .5em;
+  font-size: .875em;
+}
+
+.nav-dot {
+  width: 14px;
+  height: 14px;
+  display: block;
+  @include border-radius(50%);
+  background: #333;
+  opacity: .25;
+}
+
+.nav-dot, .nav-tooltip {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.nav-tooltip {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -15px;
+  line-height: 30px;
+  background: rgba(50, 50, 50, 0.9);
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 1em;
+  border-radius: 3px;
+  opacity: 0;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+nav a:hover .nav-tooltip {
+  opacity: 1; 
+}

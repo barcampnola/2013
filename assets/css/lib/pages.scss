@@ -35,8 +35,6 @@
   letter-spacing: .15em;
   font-weight: 800;
   text-transform: uppercase;
-  z-index: 2;
-  position: relative;
   @include text-shadow(-3px 3px 0px rgba(0,0,0,0.2));
 }
 

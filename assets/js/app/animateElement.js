@@ -3,8 +3,10 @@ var defaultOptions = {
 						duration: 25*1000
 					};
 $.fn.animateElement = jqueryWidget(function($el){
-	var op = _.defaults($el.data('animated-background-element'), defaultOptions)
-	animationLoop($el, [{left: '95%'}, {left: '0%'}], op, 0);
+	if ($(document).width() > 600) {
+		var op = _.defaults($el.data('animated-background-element'), defaultOptions)
+		animationLoop($el, [{left: '95%'}, {left: '0%'}], op, 0);
+	}
 });
 
 function animationLoop($el, steps, op, currentStepIndex) {

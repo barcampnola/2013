@@ -14,6 +14,14 @@
     @include animated-background-element('/img/cooking/cloud-3.png', 97px, 55px, 129px, 1452px);
   }
 
+  .cloud-1,
+  .cloud-2,
+  .cloud-3 {
+    @media only screen and (max-width: 600px) {
+      @include transform(scale(.5));
+    } 
+  }
+
   .page-divider {
     @extend %page-divider;
 

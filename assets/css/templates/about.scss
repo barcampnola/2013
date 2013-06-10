@@ -3,13 +3,20 @@
 }
 
 .about-slider {
-  @extend %clearfix;
   position: relative;
   overflow: visible !important;
-  width: 50%;
+  width: 80%;
   max-width: 460px;
   margin: 0 auto;
   text-align: center;
+
+  ul {
+    @extend %clearfix;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: .75em;
+  }
 
   ul {
     margin: 0;
@@ -21,16 +28,29 @@
   list-style: none;
   padding: 0 2em 1em;
   width: 360px;
-  min-width: 280px;  
-  height: 430px;
+  max-width: 100%;
+  min-width: 260px;  
+  height: 420px;
+
+  @media only screen and (max-width: 600px) {
+    padding-left: .75em;
+    padding-right: .75em;
+    height: 320px;
+  }  
 }
 
 .about-item-content {
+  cursor: pointer;
   background: rgba(255,255,255,0.95);
-  padding: 1em;
+  padding: 1em 2em;
   height: 100%;
   position: relative;
-  @include box-shadow(0px 1px 5px rgba(0,0,0,0.2));
+  @include border-radius(2px);
+  @include box-shadow(0px 1px 5px rgba(0,0,0,0.5));
+
+  @media only screen and (max-width: 600px) {
+    padding: 1em;
+  }
 
   p {
     font-size: 1.125em;  
