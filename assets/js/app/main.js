@@ -2,7 +2,7 @@
   var pawser;
 
   $(window).load(function() {
-    $(".page-current .animated").spritespin("animate", true);
+    // $(".page-current .animated").spritespin("animate", true);
 
     setTimeout(function() {
       $(".page-loader").fadeOut(1000, function() {
@@ -21,7 +21,7 @@
       height      : 550,
       frames      : 21,
       framesX     : 3,
-      animate     : false,
+      // animate     : false,
       loop        : true,
       module      : "360",
       behavior    : "none"
@@ -33,7 +33,7 @@
       height      : 500,
       frames      : 30,
       framesX     : 6,
-      animate     : false,
+      // animate     : false,
       loop        : true,
       module      : "360",
       behavior    : "none"
@@ -45,7 +45,7 @@
       height      : 500,
       frames      : 48,
       framesX     : 8,
-      animate     : false,
+      // animate     : false,
       loop        : true,
       module      : "360",
       behavior    : "none"
@@ -57,7 +57,7 @@
       height      : 550,
       frames      : 54,
       framesX     : 6,
-      animate     : false,
+      // animate     : false,
       loop        : true,
       module      : "360",
       behavior    : "none"
@@ -70,7 +70,7 @@
       frames      : 24,
       framesX     : 6,
       loop        : true,
-      animate     : false,
+      // animate     : false,
       module      : "360",
       behavior    : "none"
     });
@@ -161,17 +161,17 @@
       });
     });
 
-    var delayedStart;
+    // var delayedStart;
 
     $(".nav li").on('activate', function() {
-      $('.animated').spritespin('animate', false);
-      clearTimeout(delayedStart);
+      // $('.animated').spritespin('animate', false);
+      // clearTimeout(delayedStart);rom
 
       var page = $(this).find('a')[0].hash;
 
-      delayedStart = setTimeout(function() {
-        $(page + ' .animated').spritespin('animate', true);
-      }, 300);
+      // delayedStart = setTimeout(function() {
+        // $(page + ' .animated').spritespin('animate', true);
+      // }, 300);
     });
   });
 
