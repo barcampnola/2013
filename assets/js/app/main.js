@@ -107,7 +107,7 @@
     });
 
 
-    $(window).scroll(function() {
+    $(window).scroll( _.debounce(function() {
       $("[data-bear]").each(function() {
         var bear = $(this).data("bear");
 
@@ -118,7 +118,7 @@
           bears[bear].pause()
         }
       })
-    })
+    }, 300) );
 
     $("[data-slider='sponsors']").unslider();
 
