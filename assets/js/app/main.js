@@ -24,7 +24,7 @@
   declareSprite('#main-bear', { frames: 21 });
   declareSprite('#about-bear', { frames: 30 });
   declareSprite('#schedule-bear', { frames: 25 });
-  declareSprite('#register-bear', { frames: 43 });
+  declareSprite('#register-bear', { frames: 31 });
   declareSprite('#sponsors-bear', { frames: 24 });
   declareSprite('#disco-ball', {fps: 4, frames: 2 });
 
@@ -129,48 +129,6 @@
       }).css('height', maxHeight);
 
 
-  //   // To allow the slide to keep step with the finger,
-  //   // temporarily disable transitions.
-  //   wrap.addClass('notransition');
-  // })
-
-  // .on('move', function(e) {
-  //   var left = 100 * e.distX / width;
-
-  //   // Move slides with the finger
-  //   if (e.distX < 0) {
-  //     if (slides[i+1]) {
-  //       slides[i].style.left = left + '%';
-  //       slides[i+1].style.left = (left+100)+'%';
-  //     }
-  //     else {
-  //       slides[i].style.left = left/4 + '%';
-  //     }
-  //   }
-  //   if (e.distX > 0) {
-  //     if (slides[i-1]) {
-  //       slides[i].style.left = left + '%';
-  //       slides[i-1].style.left = (left-100)+'%';
-  //     }
-  //     else {
-  //       slides[i].style.left = left/5 + '%';
-  //     }
-  //   }
-  // })
-
-  // .on('moveend', function(e) {
-  //   wrap.removeClass('notransition');
-
-  //   slides[i].style.left = '';
-
-  //   if (slides[i+1]) {
-  //     slides[i+1].style.left = '';
-  //   }
-  //   if (slides[i-1]) {
-  //     slides[i-1].style.left = '';
-  //   }
-  // });
-
 
 
     $("[data-slider='about'] li").click(function(e) {
@@ -193,14 +151,7 @@
     // var delayedStart;
 
     $(".nav li").on('activate', function() {
-      // $('.animated').spritespin('animate', false);
-      // clearTimeout(delayedStart);rom
-
       var page = $(this).find('a')[0].hash;
-
-      // delayedStart = setTimeout(function() {
-        // $(page + ' .animated').spritespin('animate', true);
-      // }, 300);
     });
   });
 
