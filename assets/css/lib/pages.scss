@@ -116,7 +116,7 @@
   @extend %page;
   @extend %mobile-page-padding;
 
-  background-image: url(/img/page-sponsors.jpg);
+  background-image: url(/img/dancing-background-no-disco.jpg);
 
   .page-divider {
     @extend %page-divider;
@@ -129,7 +129,7 @@
   @include btn($red);
 }
 
-.animated-background-element {
+.animated-background-element, .sprited-background-element {
   display: inline-block;
   position: absolute;
 }

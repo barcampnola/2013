@@ -1,3 +1,11 @@
+#disco-ball {
+  width: 232px;
+  height: 294px;
+  top: 0;
+  left: 100% * (130px / $page-width);
+  background-image: url(/img/dancing/disco-ball-sparkles-sprite.png);
+}
+
 .sponsors-container {
   margin-left: 50%;
   width: 50%;
