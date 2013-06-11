@@ -1,5 +1,7 @@
-(function(){
+;(function(){
   var pawser;
+
+  pawser = $(".loading-message").pawser();
 
   function isScrolledIntoView(element) {
     var documentTop = $(window).scrollTop();
@@ -11,10 +13,8 @@
     return ((elementTop <= documentBottom) && (elementBottom >= documentTop));
   }
 
-  pawser = $(".loading-message").pawser();
 
-
-  var sprited = []
+  var sprited = [];
 
   function declareSprite(el, op){
     var $el = $(el);

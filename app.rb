@@ -22,6 +22,7 @@ assets {
   serve '/fonts', from: 'assets/fonts'
 
   js :app, '/js/app.js', [
+    '/js/vendor/jquery.js',
     '/js/vendor/*.js',
     '/js/app/*.js'
   ]
