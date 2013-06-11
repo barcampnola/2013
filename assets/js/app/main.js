@@ -73,6 +73,9 @@
     //   return ((elementTop <= documentBottom) && (elementBottom >= documentTop));
     // }
 
+    function isVisible(el) {
+      return $(el).is(':visible');
+    }
 
     pawser = $(".loading-message").pawser();
 
@@ -88,28 +91,36 @@
       frames: 30,
       vertical: true
     });
-    aboutBear.play();
+    if (isVisible(aboutBear.element)) {    
+      aboutBear.play();
+    }
 
     var scheduleBear = new Motio(document.getElementById('schedule-bear'), {
       fps: 25,
       frames: 25,
       vertical: true
     });
-    scheduleBear.play();
+    if (isVisible(scheduleBear.element)) {
+      scheduleBear.play();
+    }
 
     var registerBear = new Motio(document.getElementById('register-bear'), {
       fps: 25,
       frames: 43,
       vertical: true
     });
-    registerBear.play();
+    if (isVisible(registerBear.element)) {
+      registerBear.play();
+    }
 
     var sponsorsBear = new Motio(document.getElementById('sponsors-bear'), {
       fps: 25,
       frames: 24,
       vertical: true
     });
-    sponsorsBear.play();
+    if (isVisible(sponsorsBear.element)) {
+      sponsorsBear.play();
+    }
 
     // $("[data-bear=main]").spritespin({
     //   source      : "/img/page-main-bear-sprite.png",
@@ -200,7 +211,6 @@
       var maxHeight = 0;
       aboutSlider.find("ul li").each(function(e) {
         height = $(this).outerHeight();
-        console.log(height);
         if (height > maxHeight) {
           maxHeight = height;
         }
