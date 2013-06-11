@@ -15,6 +15,7 @@
 
 
   var sprited = []
+
   function declareSprite(el, op){
     var $el = $(el);
     _.defaults(op, {vertical: true, fps: 25 });
@@ -26,6 +27,7 @@
   declareSprite('#register-bear', { frames: 43 });
   declareSprite('#sponsors-bear', { frames: 24 });
   declareSprite('#disco-ball', {fps: 4, frames: 2 });
+
   function animateOnScreenSprites() {
     _.each(sprited, function(x) {
       if (isScrolledIntoView(x.$el) && x.$el.is(":visible"))
@@ -87,7 +89,7 @@
       element.html(randomText);
     });
 
-  
+
     $(window).scroll( _.debounce(animateOnScreenSprites, 300) );
     animateOnScreenSprites();
 
