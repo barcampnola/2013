@@ -34,7 +34,7 @@
   min-width: 420px;
   max-width: 600px;
   padding: 2em;
-  margin-left: 50%;
+  margin-left: 40%;
 
   @media only screen and (max-width: 480px) {
     padding: 1em;
@@ -48,7 +48,7 @@
 .schedule-list {
   @include border-radius(2px);
 
-  background: hsl(87, 87%, 94%);
+  background: #fff;
   background-clip: padding-box;
   border: 9px solid hsla(69, 87%, 12%, 0.32);
   opacity: 0.94;
@@ -115,4 +115,10 @@
   @extend %schedule-icon;
 
   background-image: url(/img/icon-hack.png);
+}
+
+.schedule-party {
+  @extend %schedule-icon;
+
+  background-image: url(/img/icon-party.png);
 }

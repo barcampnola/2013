@@ -11,6 +11,8 @@
 }
 
 .page-loader {
+  background: #cadbdf url(/img/background.png);
+
   position: fixed;
   min-height: 100%;
   top: 0;
@@ -18,7 +20,6 @@
   left: 0;
   right: 0;
   z-index: 99;
-  background-color: #78acba;
   text-align: center;
 }
 

@@ -43,7 +43,6 @@
   background: hsla(0, 87%, 30%, 0.75);
   border: 5px solid hsl(0, 89%, 32%);
   color: #fff;
-  padding: 1em 2em;
   height: 100%;
   position: relative;
   @include border-radius(2px);
@@ -55,10 +54,15 @@
 
   p {
     font-size: 1.125em;
+    padding: 0.4em 1em;
   }
 
   h3 {
+    background-color: hsl(0, 78%, 25%);
+    text-align: center;
+
     margin-top: 0;
+    padding: 10px;
   }
 }
 

@@ -12,6 +12,20 @@
 
   $(function() {
 
+    $(".register-container .btn-primary").each(function() {
+      var element = $(this);
+      var randomZ = Math.floor(Math.random()*361);
+      var randomScale = Math.random() * (1.5 - 0.5) + 0.5;
+      var randomMargin = Math.floor(Math.random()*21);
+      var randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+      _.each(["-webkit-transform", "-moz-transform", "-ms-transform", "transform"], function(property) {
+        element.css(property, "scale(" + randomScale + ") rotateZ(" + randomZ + "deg)");
+      });
+      element.css("background-color", "#" + randomColor);
+      element.css("margin", randomMargin);
+    });
+
     // window.pageLocations = []
 
     // $("[data-page]").each(function(index, element) {
@@ -20,30 +34,6 @@
     //   pageLocations.push = $(element).offset().top;
     // });
 
-    $(window).scroll(function() {
-      // var position = $(window).scrollTop();
-
-      // $("[data-bear]").each(function() {
-      //   if (isScrolledIntoView(this)) {
-      //     $(this).spritespin("animate", true);
-      //   }
-      //   else {
-      //     $(this).spritespin("animate", false);
-      //   }
-      // })
-
-      // $.each(pageLocations, function(index, value) {
-      //   previousPage = pageLocations[index-1];
-
-      //   _.find(pageLocations, function(value) { return value > position });
-      //   if (position > ) stop animation
-
-      // });
-
-
-
-
-    });
 
     // function isScrolledIntoView(element) {
     //   var documentTop = $(window).scrollTop();
@@ -59,35 +49,35 @@
     pawser = $(".loading-message").pawser();
 
     var mainBear = new Motio(document.getElementById('main-bear'), {
-      fps: 15,
+      fps: 25,
       frames: 21,
       vertical: true
     });
     mainBear.play();
 
     var aboutBear = new Motio(document.getElementById('about-bear'), {
-      fps: 15,
+      fps: 25,
       frames: 30,
       vertical: true
     });
     aboutBear.play();
 
     var scheduleBear = new Motio(document.getElementById('schedule-bear'), {
-      fps: 15,
+      fps: 25,
       frames: 25,
       vertical: true
     });
     scheduleBear.play();
 
     var registerBear = new Motio(document.getElementById('register-bear'), {
-      fps: 15,
+      fps: 25,
       frames: 43,
       vertical: true
     });
     registerBear.play();
 
     var sponsorsBear = new Motio(document.getElementById('sponsors-bear'), {
-      fps: 15,
+      fps: 25,
       frames: 24,
       vertical: true
     });
