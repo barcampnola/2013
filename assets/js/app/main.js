@@ -33,7 +33,7 @@
 
   var registerBear = new Motio(document.getElementById('register-bear'), {
     fps: 25,
-    frames: 43,
+    frames: 31,
     vertical: true
   });
 
