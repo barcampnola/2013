@@ -1,6 +1,6 @@
 .main-bear {
   @extend %bear;
-
+  @include transform(translate3d(0,0,0));
   background: url(/img/page-main-bear-sprite.png);
 
   width: 424px;
@@ -9,7 +9,7 @@
 
 .about-bear {
   @extend %bear;
-
+  @extend %except-on-mobile;
   background: url(/img/page-about-bear-sprite.png);
 
   width: 406px;
@@ -18,7 +18,7 @@
 
 .schedule-bear {
   @extend %bear;
-
+  @extend %except-on-mobile;
   background: url(/img/page-schedule-bear-sprite.png);
 
   width: 343px;
@@ -27,7 +27,7 @@
 
 .register-bear {
   @extend %bear;
-
+  @extend %except-on-mobile;
   background: url(/img/page-register-bear-sprite.png);
 
   width: 405px;
@@ -36,7 +36,7 @@
 
 .sponsors-bear {
   @extend %bear;
-
+  @extend %except-on-mobile;
   background: url(/img/page-sponsors-bear-sprite.png);
 
   width: 507px;
