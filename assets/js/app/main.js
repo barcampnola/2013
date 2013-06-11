@@ -13,7 +13,34 @@
   $(function() {
 
     $(".register-container .btn-primary").each(function() {
+      var texts = [
+        "Register",
+        "Register Now",
+        "Barcamp awaits",
+        "We're Bear-y excited",
+        "Rawr?",
+        "Flat Design Is So In Now",
+        "The Wait Is Unbearible",
+        "A-bear-ilently",
+        "Bear with me",
+        "Are you pre-beared?",
+        "Straw-bear-ys Are Delicious",
+        "I'm going Bear-zerk",
+        "I'm so em-bear-est...",
+        "Built With Our Bear Hands",
+        "It's Absolute Panda-monium",
+        "Any-bear-y notice the puns?",
+        "A Real Kodiak Moment...",
+        "It's A Panda-emic!",
+        "It's Bearing Down On Us",
+        "Good time? Furrr Sure.",
+        "Bear Grylls Is Coming?",
+        "Polarizing",
+        "Impawsible!",
+        "Another Barcamp? Fur Real?"
+      ]
       var element = $(this);
+      var randomText = texts[Math.floor(Math.random()*texts.length)];
       var randomZ = Math.floor(Math.random()*361);
       var randomScale = Math.random() * (1.5 - 0.5) + 0.5;
       var randomMargin = Math.floor(Math.random()*21);
@@ -24,6 +51,7 @@
       });
       element.css("background-color", "#" + randomColor);
       element.css("margin", randomMargin);
+      element.html(randomText);
     });
 
     // window.pageLocations = []
