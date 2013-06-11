@@ -120,8 +120,6 @@
       })
     })
 
-
-
     $("[data-slider='sponsors']").unslider();
 
     var aboutSlider = $("[data-slider='about']").unslider({dots: true, delay: false}),
