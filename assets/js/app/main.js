@@ -111,7 +111,7 @@
       $("[data-bear]").each(function() {
         var bear = $(this).data("bear");
 
-        if (isScrolledIntoView($(this))) {
+        if (isScrolledIntoView($(this)) && $(this).is(":visible")) {
           bears[bear].play()
         }
         else {
