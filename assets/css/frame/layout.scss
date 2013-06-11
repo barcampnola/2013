@@ -140,3 +140,18 @@ h3 {
     content: "...";
   }
 }
+
+
+.twilio-logo {
+  text-decoration: none;
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  display: inline-block;
+  width: 166px;
+  height: 0;
+  margin: 20px;
+  overflow: hidden;
+  padding-top: 31px;
+  background: url(http://www.twilio.com/packages/company/img/logos_icon_poweredbysmall.png) no-repeat;
+}
