@@ -1,6 +1,58 @@
 (function(){
   var pawser;
 
+  function isScrolledIntoView(element) {
+    var documentTop = $(window).scrollTop();
+    var documentBottom = documentTop + $(window).height();
+
+    var elementTop = $(element).offset().top;
+    var elementBottom = elementTop + $(element).height();
+
+    return ((elementTop <= documentBottom) && (elementBottom >= documentTop));
+  }
+
+  pawser = $(".loading-message").pawser();
+
+  var mainBear = new Motio(document.getElementById('main-bear'), {
+    fps: 25,
+    frames: 21,
+    vertical: true
+  });
+
+  var aboutBear = new Motio(document.getElementById('about-bear'), {
+    fps: 25,
+    frames: 30,
+    vertical: true
+  });
+
+  var scheduleBear = new Motio(document.getElementById('schedule-bear'), {
+    fps: 25,
+    frames: 25,
+    vertical: true
+  });
+
+  var registerBear = new Motio(document.getElementById('register-bear'), {
+    fps: 25,
+    frames: 43,
+    vertical: true
+  });
+
+  var sponsorsBear = new Motio(document.getElementById('sponsors-bear'), {
+    fps: 25,
+    frames: 24,
+    vertical: true
+  });
+
+  var bears = {
+    main: mainBear,
+    about: aboutBear,
+    schedule: scheduleBear,
+    register: registerBear,
+    sponsors: sponsorsBear
+  }
+
+
+
   $(window).load(function() {
     setTimeout(function() {
       $(".page-loader").fadeOut(1000, function() {
@@ -54,122 +106,21 @@
       element.html(randomText);
     });
 
-    // window.pageLocations = []
 
-    // $("[data-page]").each(function(index, element) {
-    //   var name = $(element).data("page");
+    $(window).scroll(function() {
+      $("[data-bear]").each(function() {
+        var bear = $(this).data("bear");
 
-    //   pageLocations.push = $(element).offset().top;
-    // });
-
-
-    // function isScrolledIntoView(element) {
-    //   var documentTop = $(window).scrollTop();
-    //   var documentBottom = documentTop + $(window).height();
-
-    //   var elementTop = $(element).offset().top;
-    //   var elementBottom = elementTop + $(element).height();
-
-    //   return ((elementTop <= documentBottom) && (elementBottom >= documentTop));
-    // }
+        if (isScrolledIntoView($(this))) {
+          bears[bear].play()
+        }
+        else {
+          bears[bear].pause()
+        }
+      })
+    })
 
 
-    pawser = $(".loading-message").pawser();
-
-    var mainBear = new Motio(document.getElementById('main-bear'), {
-      fps: 25,
-      frames: 21,
-      vertical: true
-    });
-    mainBear.play();
-
-    var aboutBear = new Motio(document.getElementById('about-bear'), {
-      fps: 25,
-      frames: 30,
-      vertical: true
-    });
-    aboutBear.play();
-
-    var scheduleBear = new Motio(document.getElementById('schedule-bear'), {
-      fps: 25,
-      frames: 25,
-      vertical: true
-    });
-    scheduleBear.play();
-
-    var registerBear = new Motio(document.getElementById('register-bear'), {
-      fps: 25,
-      frames: 43,
-      vertical: true
-    });
-    registerBear.play();
-
-    var sponsorsBear = new Motio(document.getElementById('sponsors-bear'), {
-      fps: 25,
-      frames: 24,
-      vertical: true
-    });
-    sponsorsBear.play();
-
-    // $("[data-bear=main]").spritespin({
-    //   source      : "/img/page-main-bear-sprite.png",
-    //   width       : 424,
-    //   height      : 550,
-    //   frames      : 21,
-    //   framesX     : 3,
-    //   animate     : false,
-    //   loop        : true,
-    //   module      : "360",
-    //   behavior    : "none"
-    // });
-
-    // $("[data-bear=about]").spritespin({
-    //   source      : "/img/page-about-bear-sprite.png",
-    //   width       : 406,
-    //   height      : 500,
-    //   frames      : 30,
-    //   framesX     : 6,
-    //   animate     : false,
-    //   loop        : true,
-    //   module      : "360",
-    //   behavior    : "none"
-    // });
-
-    // $("[data-bear=schedule]").spritespin({
-    //   source      : "/img/page-schedule-bear-sprite.png",
-    //   width       : 343,
-    //   height      : 500,
-    //   frames      : 48,
-    //   framesX     : 8,
-    //   animate     : false,
-    //   loop        : true,
-    //   module      : "360",
-    //   behavior    : "none"
-    // });
-
-    // $("[data-bear=register]").spritespin({
-    //   source      : "/img/page-register-bear-sprite.png",
-    //   width       : 448,
-    //   height      : 550,
-    //   frames      : 54,
-    //   framesX     : 6,
-    //   animate     : false,
-    //   loop        : true,
-    //   module      : "360",
-    //   behavior    : "none"
-    // });
-
-    // $("[data-bear=sponsors]").spritespin({
-    //   source      : "/img/page-sponsors-bear-sprite.png",
-    //   width       : 507,
-    //   height      : 450,
-    //   frames      : 24,
-    //   framesX     : 6,
-    //   loop        : true,
-    //   animate     : false,
-    //   module      : "360",
-    //   behavior    : "none"
-    // });
 
     $("[data-slider='sponsors']").unslider();
 
@@ -200,7 +151,7 @@
       var maxHeight = 0;
       aboutSlider.find("ul li").each(function(e) {
         height = $(this).outerHeight();
-        console.log(height);
+
         if (height > maxHeight) {
           maxHeight = height;
         }
