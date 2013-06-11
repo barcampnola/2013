@@ -10,6 +10,10 @@
   height: 14px;
 }
 
+%mobile-page-padding {
+  padding-bottom: 100px;
+}
+
 .page-loader {
   background: #cadbdf url(/img/background.png);
 
@@ -69,7 +73,7 @@
 
 .page-about {
   @extend %page;
-
+  @extend %mobile-page-padding;
   background-image: url(/img/page-about.jpg);
   background-image: url(/img/page-about-alt.jpg);
 
@@ -110,6 +114,7 @@
 
 .page-sponsors {
   @extend %page;
+  @extend %mobile-page-padding;
 
   background-image: url(/img/page-sponsors.jpg);
 
