@@ -13,45 +13,26 @@
 
   pawser = $(".loading-message").pawser();
 
-  var mainBear = new Motio(document.getElementById('main-bear'), {
-    fps: 25,
-    frames: 21,
-    vertical: true
-  });
 
-  var aboutBear = new Motio(document.getElementById('about-bear'), {
-    fps: 25,
-    frames: 30,
-    vertical: true
-  });
-
-  var scheduleBear = new Motio(document.getElementById('schedule-bear'), {
-    fps: 25,
-    frames: 25,
-    vertical: true
-  });
-
-  var registerBear = new Motio(document.getElementById('register-bear'), {
-    fps: 25,
-    frames: 43,
-    vertical: true
-  });
-
-  var sponsorsBear = new Motio(document.getElementById('sponsors-bear'), {
-    fps: 25,
-    frames: 24,
-    vertical: true
-  });
-
-  var bears = {
-    main: mainBear,
-    about: aboutBear,
-    schedule: scheduleBear,
-    register: registerBear,
-    sponsors: sponsorsBear
+  var sprited = []
+  function declareSprite(el, op){
+    var $el = $(el);
+    _.defaults(op, {vertical: true, fps: 25 });
+    sprited.push({ $el: $el, sprite: new Motio($el[0], op) });
   }
-
-
+  declareSprite('#main-bear', { frames: 21 });
+  declareSprite('#about-bear', { frames: 30 });
+  declareSprite('#schedule-bear', { frames: 25 });
+  declareSprite('#register-bear', { frames: 43 });
+  declareSprite('#sponsors-bear', { frames: 24 });
+  declareSprite('#disco-ball', {fps: 4, frames: 2 });
+  function animateOnScreenSprites() {
+    _.each(sprited, function(x) {
+      if (isScrolledIntoView(x.$el) && x.$el.is(":visible"))
+        return x.sprite.play()
+      x.sprite.pause()
+    });
+  }
 
   $(window).load(function() {
     setTimeout(function() {
@@ -106,19 +87,9 @@
       element.html(randomText);
     });
 
-
-    $(window).scroll( _.debounce(function() {
-      $("[data-bear]").each(function() {
-        var bear = $(this).data("bear");
-
-        if (isScrolledIntoView($(this)) && $(this).is(":visible")) {
-          bears[bear].play()
-        }
-        else {
-          bears[bear].pause()
-        }
-      })
-    }, 300) );
+  
+    $(window).scroll( _.debounce(animateOnScreenSprites, 300) );
+    animateOnScreenSprites();
 
     $("[data-slider='sponsors']").unslider();
 
