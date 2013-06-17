@@ -1,10 +1,49 @@
+@mixin steps($name, $frames) {
+  @include transform(translateZ(0));
+
+  -webkit-animation: #{$name} 1s steps($frames) infinite;
+     -moz-animation: #{$name} 1s steps($frames) infinite;
+      -ms-animation: #{$name} 1s steps($frames) infinite;
+       -o-animation: #{$name} 1s steps($frames) infinite;
+          animation: #{$name} 1s steps($frames) infinite;  
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin play($name, $height) {
+  @include keyframes($name) {
+    from { background-position: 0px 0px; }
+      to { background-position: 0px -#{$height}; }  
+  }
+}
+
+@include play(main-bear, 11550px);
+@include play(about-bear, 15000px);
+@include play(schedule-bear, 12500px);
+@include play(register-bear, 13500px);
+@include play(sponsors-bear, 10800px);
+
 .main-bear {
   @extend %bear;
-  @include transform(translate3d(0,0,0));
-  background: url(/img/page-main-bear-sprite.png);
+  background-image: url(/img/page-main-bear-sprite.png);
 
   width: 424px;
   height: 550px;
+  
+  @include steps(main-bear, 21);
 }
 
 .about-bear {
@@ -14,6 +53,7 @@
 
   width: 406px;
   height: 500px;
+  @include steps(about-bear, 30);
 }
 
 .schedule-bear {
@@ -23,6 +63,7 @@
 
   width: 343px;
   height: 500px;
+  @include steps(schedule-bear, 25);
 }
 
 .register-bear {
@@ -32,6 +73,7 @@
 
   width: 365px;
   height: 450px;
+  @include steps(register-bear, 30);
 }
 
 .sponsors-bear {
@@ -41,6 +83,7 @@
 
   width: 507px;
   height: 450px;
+  @include steps(sponsors-bear, 24);
 }
 
 .main-bear {
@@ -56,10 +99,6 @@
   filter: FlipH;
   -ms-filter: "FlipH";
 }
-
-
-
-
 
       // source      : "/img/page-main-bear-sprite.png",
       // width       : 424,

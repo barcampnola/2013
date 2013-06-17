@@ -13,29 +13,6 @@
     return ((elementTop <= documentBottom) && (elementBottom >= documentTop));
   }
 
-
-  var sprited = [];
-
-  function declareSprite(el, op){
-    var $el = $(el);
-    _.defaults(op, {vertical: true, fps: 25 });
-    sprited.push({ $el: $el, sprite: new Motio($el[0], op) });
-  }
-  declareSprite('#main-bear', { frames: 21 });
-  declareSprite('#about-bear', { frames: 30 });
-  declareSprite('#schedule-bear', { frames: 25 });
-  declareSprite('#register-bear', { frames: 31 });
-  declareSprite('#sponsors-bear', { frames: 24 });
-  declareSprite('#disco-ball', {fps: 4, frames: 2 });
-
-  function animateOnScreenSprites() {
-    _.each(sprited, function(x) {
-      if (isScrolledIntoView(x.$el) && x.$el.is(":visible"))
-        return x.sprite.play()
-      x.sprite.pause()
-    });
-  }
-
   $(window).load(function() {
     setTimeout(function() {
       $(".page-loader").fadeOut(1000, function() {
@@ -90,8 +67,8 @@
     });
 
 
-    $(window).scroll( _.debounce(animateOnScreenSprites, 300) );
-    animateOnScreenSprites();
+    // $(window).scroll( _.debounce(animateOnScreenSprites, 300) );
+    // animateOnScreenSprites();
 
     $("[data-slider='sponsors']").unslider();
 
@@ -118,15 +95,15 @@
         }
       });
 
-      // Find the tallest section, and make them all that tall.
-      var maxHeight = 0;
-      aboutSlider.find("ul li").each(function(e) {
-        height = $(this).outerHeight();
+    // Find the tallest section, and make them all that tall.
+    var maxHeight = 0;
+    aboutSlider.find("ul li").each(function(e) {
+      height = $(this).outerHeight();
 
-        if (height > maxHeight) {
-          maxHeight = height;
-        }
-      }).css('height', maxHeight);
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    }).css('height', maxHeight);
 
 
 
