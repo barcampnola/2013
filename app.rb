@@ -12,6 +12,13 @@ configure :development do
   register Sinatra::Reloader
 end
 
+configure :production do
+  set :static_cache_control, [:public, :max_age => 300]
+  before do
+    cache_control :public, :max_age => 300
+  end
+end
+
 assets {
   # css_compression :sass
   js_compression :simple
@@ -32,7 +39,17 @@ assets {
   ]
 }
 
+helpers do
+  def production?
+    ENV['RACK_ENV'] == 'production'
+  end
+
+  ASSET_HOST = production? ? 'http://d12qi0sd8r0cmx.cloudfront.net' : ""
+  def asset path
+    ASSET_HOST + path
+  end
+end
 
 get "/" do
-  send_file File.join(settings.public_folder, "index.html")
+  erb :index
 end

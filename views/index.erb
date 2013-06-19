@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Barcamp 6 / Bearcamp 1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="<%= asset '/css/app.css' %>">
+  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+</head>
+<body data-spy="scroll" data-target="nav">
+  <div class="page-loader">
+    <img src="<%= asset '/img/barcamp-head.png' %>" class="loading-logo" />
+
+    <div class="loading-message">Loading App</div>
+  </div>
+  <nav>
+    <ul class="nav">
+      <li>
+        <a href="#main">
+          <span class="nav-tooltip">main</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <span class="nav-tooltip">about</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#schedule">
+          <span class="nav-tooltip">schedule</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#register">
+          <span class="nav-tooltip">register</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#sponsors">
+          <span class="nav-tooltip">sponsors</span>
+          <span class="nav-dot"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+    <div id="main" class="page-main" data-page="main">
+
+      <img src="<%= asset '/img/barcamp-logo.png' %>" class="barcamp-logo" />
+
+      <div class="page-content">
+        <h3>July 13-14, 2013</h3>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="#about" class="next-section">&darr;</a>
+      </div>
+      <div id="main-bear" class="main-bear animated" data-bear="main"></div>
+
+      <hr class="page-divider" />
+    </div>
+
+    <div id="about" class="page-about" data-page="about">
+      <h2>
+        <span class="page-title">Bearcamp</span>
+        <span class="page-subtitle">the unconference</span>
+      </h2>
+      <div class="about-slider" data-slider="about">
+        <ul>
+          <li class="about-item">
+            <div class="about-item-content">
+              <h3>What is Barcamp?</h3>
+              <p>
+                Bearcamp Nola is your local incarnation of user-generated conferences called BarCamps. There is absolutely no fixed schedule, no speaker list, no mercy.
+              </p>
+              <p>
+                You have the freedom to listen, network, and speak on whatever topics you are most passionate about. The intensity will break you. It is insanity. It is madness.
+              </p>
+              <p>
+                It is Barcamp.
+              </p>
+            </div>
+          </li>
+          <li class="about-item">
+            <div class="about-item-content">
+              <h3>Who can present?</h3>
+              <p>
+                Anyone can present! Some prepare presentations ahead of time, others decide to talk the day of.
+              </p>
+              <p>
+                Generally the topics revolve around technology, creative, and entrepreneurialism, but you can speak on any topic you are passionate about. Something you want to teach; experiences you want to share; challenges you’ve faced.
+              </p>
+            </div>
+          </li>
+          <li class="about-item">
+            <div class="about-item-content">
+              <h3>How does it work?</h3>
+              <p>
+                After the morning introduction, you can sign up to present your topic. Then, in a mad dash, everyone fills out the schedule of speakers on the spot!
+              </p>
+              <p>
+                Presentations can be 15 minutes, or 45 minutes long, your choice.  We'll make sure to have plenty of rooms with plugs, projectors, and anything else you need to run your presentation.
+              </p>
+            </div>
+          </li>
+          <li class='about-item'>
+            <div class="about-item-content">
+              <h3>Should you come?</h3>
+              <p>
+                Barcamp is an event for everyone. If you want to learn from your peers, share your knowledge, interests, and hobbies – Barcamp is for you. Developers, creatives, entrepreneurs, or whoever you are.
+              </p>
+              <p>
+                Plus you get a sweet t-shirt, and can 'trep your way through the day.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="about-bear" class="about-bear animated" data-bear="about"></div>
+
+      <hr class="page-divider" />
+    </div>
+
+    <div id="schedule" class="page-schedule" data-page="schedule">
+      <h2>
+        <span class="page-title">Schedule</span>
+      </h2>
+
+      <div class="cloud-1 animated-background-element" data-animated-background-element='{"duration":20000}'></div>
+      <div class="cloud-2 animated-background-element" data-animated-background-element='{"duration":30000}'></div>
+      <div class="cloud-3 animated-background-element" data-animated-background-element='{"duration":25000}'></div>
+
+      <div class="schedule">
+        <div class="schedule-day-one">
+          <h3>Saturday, July 13th</h3>
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <i class="schedule-greet"></i>
+              <span class="schedule-name">
+                We meet you, you meet us, <strong>true romance</strong>
+              </span>
+              <span class="schedule-time">9:30a</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-coffee"></i>
+              <span class="schedule-name">
+                <strong>Registration</strong> ‘n coffee in your face
+              </span>
+              <span class="schedule-time">10a</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-talk"></i>
+              <span class="schedule-name">
+                <strong>Presentations</strong> everywhere!!
+              </span>
+              <span class="schedule-time">11a</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-food"></i>
+              <span class="schedule-name">
+                <strong>Eatin'</strong> + hack day project <strong>secretsss</strong>
+              </span>
+              <span class="schedule-time">1p</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-talk"></i>
+              <span class="schedule-name">
+                <strong>Presentations</strong> on a bear!!
+              </span>
+              <span class="schedule-time">2p</span>
+            </li>
+          </ul>
+        </div>
+        <div class="schedule-day-two">
+          <h3>Sunday, July 14th</h3>
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <i class="schedule-coffee"></i>
+              <span class="schedule-name">
+                You <strong>drink coffee</strong>, and it <strong>drinks you</strong>
+              </span>
+              <span class="schedule-time">9:30a</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-hack"></i>
+              <span class="schedule-name">
+                <strong>Start hackin’</strong> like a boss
+              </span>
+              <span class="schedule-time">10a</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-food"></i>
+              <span class="schedule-name">
+                <strong>Lunchlunchlunch</strong>
+              </span>
+              <span class="schedule-time">1p</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-hack"></i>
+              <span class="schedule-name">
+                <strong>Hack so hard</strong>
+              </span>
+              <span class="schedule-time">1:30p</span>
+            </li>
+            <li class="schedule-item">
+              <i class="schedule-party"></i>
+              <span class="schedule-name">
+                <strong>Finish</strong> and <strong>partytime!!!!</strong>
+              </span>
+              <span class="schedule-time">5:30p</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="schedule-bear" class="schedule-bear animated" data-bear="schedule"></div>
+
+      <hr class="page-divider" />
+    </div>
+
+    <div id="register" class="page-register" data-page="register">
+      <h2>
+        <span class="page-title">MORE Register Buttons</span>
+      </h2>
+
+      <div class="register-container">
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+        <a href="http://barcampnola6.eventbrite.com/" class="btn-primary">Register</a>
+      </div>
+
+      <div id="register-bear" class="register-bear animated" data-bear="register"></div>
+
+      <hr class="page-divider" />
+    </div>
+
+    <div id="sponsors" class="page-sponsors" data-page="sponsors">
+      <h2>
+        <span class="page-title">Thank You</span>
+        <span class="page-subtitle">to our sponsors!</span>
+      </h2>
+
+      <div id="disco-ball" class="sprited-background-element"></div>
+
+      <div class="sponsors-container">
+        <div class="sponsors" data-slider="sponsors">
+          <ul class="sponsors-list">
+            <li class="sponsors-item">
+              <ul class="sponsors-logos-list">
+                <li class="sponsors-logo-item">
+                  <a href="http://apptitudenola.com/" class="apptitude-logo">Apptitude</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.carrolltongroup.com/" class="carrollton-group-logo">Carrollton Group</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.cotingasoft.com/" class="cotingasoft-logo">CotingaSoft</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.neworleansdowntown.com/" class="ddd-logo">Downtown Development District</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.federatedsample.com/" class="federated-sample-logo">Federated Sample</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.flatstack.com/" class="flatstack-logo">Flat Stack</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sponsors-item">
+              <ul class="sponsors-logos-list">
+                <li class="sponsors-logo-item">
+                  <a href="http://gnoinc.org/" class="gnoinc-logo">Greater New Orleans Inc</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.hopandjaunt.com/" class="hop-and-jaunt-logo">Hop And Jaunt</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.kickboardforteachers.com/" class="kickboard-logo">Kickboard For Teachers</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://lanyapcreative.com/" class="lanyap-logo">Lanyap Creative</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://lp.co/" class="launchpad-logo">Launchpad Co-working</a>
+                </li>
+                <li class="sponsors-logo-item">
+                  <a href="http://www.redticketgames.com/" class="red-ticket-games-logo">Red Ticket Games</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <a href="http://www.twilio.com/" class="twilio-logo">powered by twilio™</a>
+
+      <div id="sponsors-bear" class="sponsors-bear animated" data-bear="sponsors"></div>
+
+      <hr class="page-divider" />
+    </div>
+<!--
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/vendor/underscore-min.js"></script>
+  <script src="/js/vendor/modernizr.js"></script>
+  <script src="/js/vendor/pawser.js"></script>
+  <script src="/js/vendor/motio.js"></script>
+
+  <script src="/js/vendor/spritespin.js"></script>
+  <script src="/js/vendor/transitions.js"></script>
+  <script src="/js/vendor/unslider.js"></script>
+  <script src="/js/vendor/bootstrap-scrollspy.js"></script>
+  <script src="/js/vendor/jquery.event.move.js"></script>
+  <script src="/js/vendor/jquery.event.swipe.js"></script>
+  <script src="/js/app/animateElement.js"></script>
+  <script src="/js/app/main.js"></script>
+-->
+<script src="<%= asset '/js/app.js' %>"></script>
+</body>
+</html>
