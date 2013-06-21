@@ -111,3 +111,52 @@
 
   background-image: url(/img/logos/modified/red-ticket-games.png);
 }
+
+
+.mark-anderson-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/mark-anderson.png);
+}
+
+.nola38-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/nola38.png);
+}
+
+.one-canal-place-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/one-canal-place.png);
+}
+
+.surge-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/surge.png);
+}
+
+.github-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/github.png);
+}
+
+.turbosquid-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/turbosquid.png);
+}
+
+.wgno-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/wgno.png);
+}
+
+.the-504ensics-labs-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/the-504ensics-labs.png);
+}
