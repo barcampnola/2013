@@ -161,3 +161,15 @@
 
   background-image: url(/img/logos/modified/the-504ensics-labs.png);
 }
+
+.webdevrs-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/webdevrs.png);
+}
+
+.archon-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/archon.png);
+}
