@@ -173,3 +173,39 @@
 
   background-image: url(/img/logos/modified/archon.png);
 }
+
+.arb-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/arb.png);
+}
+
+.ge-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/ge.png);
+}
+
+.nola-couture-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/nola-couture.png);
+}
+
+.revelry-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/revelry.png);
+}
+
+.susco-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/susco.png);
+}
+
+.touch-logo {
+  @extend %logo-image;
+
+  background-image: url(/img/logos/modified/touch.png);
+}
